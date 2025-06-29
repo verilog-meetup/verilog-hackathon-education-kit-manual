@@ -16,8 +16,8 @@ See [MD cheat sheet](https://www.markdownguide.org/cheat-sheet/)
 Some code in Bash
 ```
 
-```SystemVerilog
-Some code in Bash
+```Verilog
+Some code in Verilog
 ```
 
 1. List Item
@@ -29,3 +29,25 @@ Some code in Bash
 * List Item
 
   # Jim can edit and post
+
+Bold	**bold text**
+Italic	*italicized text*
+
+Blockquote
+
+> blockquote
+> blockquoteblockquoteblockquote
+> blockquote
+> blockquoteblockquoteblockquote
+
+Horizontal Rule
+---
+
+
+Element	Markdown Syntax
+Table
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
