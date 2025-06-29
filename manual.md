@@ -8,7 +8,7 @@ See [MD cheat sheet](https://www.markdownguide.org/cheat-sheet/)
 
 ![Basic Board Setup](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/basic_board_setup_1.jpg)
 
-[Link](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/images/basic_board_setup_1.jpg)
+[Link](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/basic_board_setup_1.jpg)
 
 ### 1.1. Config your name and email
 
