@@ -6,7 +6,7 @@ See [MD cheat sheet](https://www.markdownguide.org/cheat-sheet/)
 
 ## 1. Board Setup
 
-![Basic Board Setup](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/images/basic_board_setup_1.jpg)
+![Basic Board Setup](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/basic_board_setup_1.jpg)
 
 [Link](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/images/basic_board_setup_1.jpg)
 
