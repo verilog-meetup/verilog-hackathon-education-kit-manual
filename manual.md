@@ -1,5 +1,5 @@
 # Verilog Hackathon Education Kit Manual  
-📝- Note: I will be doing a template update before Noon Monday June 30... if you want to start thinking, please do, but maybe don't actually make edits.
+> [!NOTE] I will be doing a template update before Noon Monday June 30... if you want to start thinking, please do, but maybe don't actually make edits.
 ---
 ### Methods to show progress:
 If you want to show you are still working or done, add the following:  
@@ -10,8 +10,8 @@ If you want to show you are still working or done, add the following:
 ❎- If you see a note 📝 assigned to you or if you are going to accept it, replace it with a ❎  
 
 ### Notes to Writers:
-📝 - Suggest a better title for this document  
-📝 - Just so you know, I'm (STEAM Clown) an going to be just editing this doc in place, so if you make a fork, just make sure you check it in correctly
+> [!NOTE] - Suggest a better title for this document  
+> [!NOTE] - Just so you know, I'm (STEAM Clown) an going to be just editing this doc in place, so if you make a fork, just make sure you check it in correctly
 🚧- I'm going to add a lab template, where we can each pick a lab and update that section.  
 
 ---
@@ -55,12 +55,12 @@ In this 🛠️ Lab Activity, you are going to install the Gowan Tang-Nano FPGA 
 ---
 ## Verilog Labs
 ---
-📝 - The following are the Labs that are in the [Basic Music - Hackation](https://github.com/yuri-panchul/basics-graphics-music/tree/main) in the [Problems](https://github.com/yuri-panchul/basics-graphics-music/tree/main/hackathon/problems) directory.  What other labs should we have to teach basic Verilog?  
-📝 - STEAM CLown - I think that we should have a few more Labs to show using the GPIO board.  Also, maybe we should change the order of the labs, so we can do all the labs focused on the GPIO module before we start looking at the Display. Thoughts?  
+> [!NOTE] - The following are the Labs that are in the [Basic Music - Hackation](https://github.com/yuri-panchul/basics-graphics-music/tree/main) in the [Problems](https://github.com/yuri-panchul/basics-graphics-music/tree/main/hackathon/problems) directory.  What other labs should we have to teach basic Verilog?  
+> [!NOTE] - STEAM CLown - I think that we should have a few more Labs to show using the GPIO board.  Also, maybe we should change the order of the labs, so we can do all the labs focused on the GPIO module before we start looking at the Display. Thoughts?  
 
 ### Gates & Muxes
 #### Gates & Muxes Introduction
-📝 - This section should link to a presentation.  Short explanation can be here, but really this should be linked to a presentation, and other resources to teach about this.  My plan for my class is to have a presentation, "Dig Deeper" assignments, some additional resources, and then a set of quiz questions.  This will be implemented in a Canvas LMS, and I'll publish this later in Jan 2026.
+> [!NOTE] - This section should link to a presentation.  Short explanation can be here, but really this should be linked to a presentation, and other resources to teach about this.  My plan for my class is to have a presentation, "Dig Deeper" assignments, some additional resources, and then a set of quiz questions.  This will be implemented in a Canvas LMS, and I'll publish this later in Jan 2026.
 
 Give an overview for this component.  Include a "Why are we doing this step in this order".  This can be a short or long or multiple paragraphs. 
 Overview of component
@@ -68,18 +68,18 @@ Overview of component
 * This Step should take about N minutes to complete. 
 
 #### Logic Gates Verilog Code
-[!NOTE] - This section will show the Verilog code examples, explain how it works, and any new Verilog structures
+> [!NOTE] - This section will show the Verilog code examples, explain how it works, and any new Verilog structures
 **Logic Gates Verilog Code Introduction**
 Add a overview of how Logic Gate code works, and a few paragraphs of what are the logic gates, and what they look like in Verilog
 ```Verilog
 Some code in Verilog
 ```
 ##### Target Hardware Setup and Pin Description
-[!NOTE] - This section should link to a presentation.
-[!NOTE] - This section should have a picture showing the Gowin FPGA and GPIO module and the connections
+> [!NOTE] - This section should link to a presentation.
+> [!NOTE] - This section should have a picture showing the Gowin FPGA and GPIO module and the connections
 **GPIO Module - Hardware:** discription of hardware module and pins description as it's used i this lab.  
 **GPIO Module - Pin Description:**
-[!NOTE] - This should be a table of 3 columns: periferal pin, FPGA pin, Description
+> [!NOTE] - This should be a table of 3 columns: periferal pin, FPGA pin, Description
 |   Peripheral Pin  |     FPGA Pin      |          Description                                    |
 | ----------------- | ----------------- | ------------------------------------------------------- |
 | Pin Name / Number | Pin Name / Number |       Short Description                                 |
@@ -88,10 +88,10 @@ Some code in Verilog
 | Pin Name / Number | Pin Name / Number |       Short Description                                 |
 
 ##### Target Software, Tools, Libraries & Drivers Setup
-[!NOTE] - This section will cover any specific software, tools, Libraries or Drivers that are used
+> [!NOTE] - This section will cover any specific software, tools, Libraries or Drivers that are used
 
 ##### Verilog Logic Gate Labs / Challenges
-[!NOTE] - This section will explain the specific Verilog Lab, what the goals are and outline the challenges.
+> [!NOTE] - This section will explain the specific Verilog Lab, what the goals are and outline the challenges.
 ```Verilog
 Some code in Verilog
 ```
