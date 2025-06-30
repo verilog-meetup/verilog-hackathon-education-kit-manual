@@ -62,6 +62,29 @@ In this 🛠️ Lab Activity, you are going to install the Gowan Tang-Nano FPGA 
 #### Gates & Muxes Introduction
 📝 - This section should link to a presentation.  Short explanation can be here, but really this should be linked to a presentation, and other resources to teach about this.  My plan for my class is to have a presentation, "Dig Deeper" assignments, some additional resources, and then a set of quiz questions.  This will be implemented in a Canvas LMS, and I'll publish this later in Jan 2026.
 
+Give an overview for this component.  Include a "Why are we doing this step in this order".  This can be a short or long or multiple paragraphs. 
+Overview of component
+This Step will include… < list what they are going to accomplish >
+This Step should take about N minutes to complete.  
+#### Ligic Gates Verilog Code
+
+#### Target Hardware Setup and Pin Description
+[!NOTE] - This section should link to a presentation.
+[!NOTE] - This section should have a picture showing the Gowin FPGA and GPIO module and the connections
+**GPIO Module - Hardware:** discription of hardware module and pins description as it's used i this lab.  
+**GPIO Module - Pin Description:**
+[!NOTE] - This should be a table of 3 columns: periferal pin, FPGA pin, Description
+|   Peripheral Pin  |     FPGA Pin     |          Description          |
+| ----------------- | ---------------- | ----------------------------- |
+| Pin Name / Number | Pin Name / Numbe |       Short Description       |
+| Pin Name / Number | Pin Name / Numbe |       Short Description       |
+| Pin Name / Number | Pin Name / Numbe |       Short Description       |
+| Pin Name / Number | Pin Name / Numbe |       Short Description       |
+
+
+#### Multiplexer Verilog Code
+
+
 ### Rectangles & Circles
 
 ### D Flip Flop
