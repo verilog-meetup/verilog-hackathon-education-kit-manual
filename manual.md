@@ -1,5 +1,5 @@
 # Verilog Hackathon Education Kit Manual  
-📝- Note: I will be doing a template update before Noon Monday June 30... if you want to start thinking, please do, but maybe done actually make edits.
+📝- Note: I will be doing a template update before Noon Monday June 30... if you want to start thinking, please do, but maybe don't actually make edits.
 ---
 ### Methods to show progress:
 If you want to show you are still working or done, add the following:  
