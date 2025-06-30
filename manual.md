@@ -3,16 +3,16 @@
 ---
 ### Methods to show progress:
 If you want to show you are still working or done, add the following:  
-🚧- Construction emoji, means you are still working on this section  
-✅- Done with this task
-❌- red "x", means you are not done, have not started, or are in progress
-📝- This is a note to others. You can assign these notes to all or to a specific person.  
-❎- If you see a note 📝 assigned to you or if you are going to accept it, replace it with a ❎  
+> [!NOTE]🚧- Construction emoji, means you are still working on this section  
+> [!NOTE]✅- Done with this task
+> [!NOTE]❌- red "x", means you are not done, have not started, or are in progress
+> [!NOTE]📝- This is a note to others. You can assign these notes to all or to a specific person.  
+> [!NOTE]❎- If you see a note 📝 assigned to you or if you are going to accept it, replace it with a ❎  
 
 ### Notes to Writers:
 > [!NOTE] - Suggest a better title for this document  
 > [!NOTE] - Just so you know, I'm (STEAM Clown) an going to be just editing this doc in place, so if you make a fork, just make sure you check it in correctly
-🚧- I'm going to add a lab template, where we can each pick a lab and update that section.  
+> [!NOTE]🚧- I'm going to add a lab template, where we can each pick a lab and update that section.  
 
 ---
 ### Links That will be deleted later
@@ -22,7 +22,7 @@ If you want to show you are still working or done, add the following:
 ---
 # Verilog Hackathon Education Kit Manual
 ## About This Manual  
-🚧- ❎- Assigned - STEAM Clown will update this later  
+> [!NOTE]🚧- ❎- Assigned - STEAM Clown will update this later  
 This Manual and labs are a comprehensive introduction to Verilog Hardware Description Language (HDL), designed for both beginners and experienced engineers looking to deepen their understanding of digital system design. Whether you're new to Verilog or aiming to strengthen your skills, this course offers a solid foundation in modeling, simulating, and synthesizing digital logic. You’ll learn how to describe complex hardware systems using Verilog, with hands-on experience targeting both FPGA and ASIC platforms.   
 
 Through progressive modules, real-world labs, and capstone projects, you'll gain practical skills applicable to embedded systems, electronics engineering, and chip design industries. This course balances conceptual understanding with industry-relevant application, making it ideal for students, hobbyists, and professionals alike.  
@@ -33,24 +33,24 @@ While the Verilog design flows described in this Manual can target multiple FPGA
 
 
 ## Introduction - Verilog Hackathon Education Kit
-🚧- Anyone can work on this... It is just a short overview of the kit, golas, and how to use it
+> [!NOTE]🚧- Anyone can work on this... It is just a short overview of the kit, golas, and how to use it
 ## Introduction to The Verilog Language & Syntax
-🚧- This section will give a overview of the Verilog language, and have a few sections on the Verilog syntax, but not have labs.  Some topics and sections are as follows:  
+> [!NOTE]🚧- This section will give a overview of the Verilog language, and have a few sections on the Verilog syntax, but not have labs.  Some topics and sections are as follows:  
 ### Introduction to Digital Design and Verilog  
-🚧- Anyone can work on this... It probably should link to an overview presentation  
+> [!NOTE]🚧- Anyone can work on this... It probably should link to an overview presentation  
 ### ASIC vs FPGA: What’s the Difference?  
-🚧- Anyone can work on this... It probably should link to an overview presentation  
+> [!NOTE]🚧- Anyone can work on this... It probably should link to an overview presentation  
 ### Verilog Design Flow Overview (Simulation, Synthesis, Implementation)  
-🚧- Anyone can work on this... It probably should link to an overview presentation  
+> [!NOTE]🚧- Anyone can work on this... It probably should link to an overview presentation  
 
 ## Introduction To Kit Hardware  
 ### Gowin FPGA Board - Tang-Nano Introduction  
 #### 🛠️ LAB Activity: Install of the Gowin Tang-Nano FPGA tools - Installation & Build Steps  
-🚧- ❎- STEAM Clown will update this later
+> [!NOTE]🚧- ❎- STEAM Clown will update this later
 In this 🛠️ Lab Activity, you are going to install the Gowan Tang-Nano FPGA tools.  You will verify that the installation is correct and ready to run the subsequent Verilog Labs. 
 
 ### Gowin FPGA Board - Tang-Nano Setup & Hardware Connections    
-🚧- This section will show the connection of all the hardware, GPIO board, Display, Utrasonie, etc...
+> [!NOTE]🚧- This section will show the connection of all the hardware, GPIO board, Display, Utrasonie, etc...
 
 ---
 ## Verilog Labs
