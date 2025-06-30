@@ -22,7 +22,8 @@ If you want to show you are still working or done, add the following:
 ---
 # Verilog Hackathon Education Kit Manual
 ## About This Manual  
-> [!NOTE]🚧- ❎- Assigned - STEAM Clown will update this later  
+> [!NOTE]🚧- ❎- Assigned - STEAM Clown will update this later
+  
 This Manual and labs are a comprehensive introduction to Verilog Hardware Description Language (HDL), designed for both beginners and experienced engineers looking to deepen their understanding of digital system design. Whether you're new to Verilog or aiming to strengthen your skills, this course offers a solid foundation in modeling, simulating, and synthesizing digital logic. You’ll learn how to describe complex hardware systems using Verilog, with hands-on experience targeting both FPGA and ASIC platforms.   
 
 Through progressive modules, real-world labs, and capstone projects, you'll gain practical skills applicable to embedded systems, electronics engineering, and chip design industries. This course balances conceptual understanding with industry-relevant application, making it ideal for students, hobbyists, and professionals alike.  
