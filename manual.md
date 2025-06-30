@@ -18,6 +18,11 @@ If you want to show you are still working or done, add the following:
 ### Links That will be deleted later
 * [MD cheat sheet](https://www.markdownguide.org/cheat-sheet/)
 * [Old Google Document](https://docs.google.com/document/d/1Z1MZMz6SOwn6kjaCy0DiFt3yNVrN_1zEZgmNQC1ft-Q/edit?usp=sharing)
+Presentations:
+* [Workforce Development](https://bit.ly/ee-workforce-devel)
+* [Verilog Meetup LA](https://bit.ly/Verilog-Meetup-in-LA-2024-08-31)
+* [ADA Univ](https://bit.ly/ada-univ-sv-fpga-2024)
+* [HackerDojo](https://bit.ly/Yuri-Panchul-Hacker-Dojo-2024-01-14)
 
 ---
 # Verilog Hackathon Education Kit Manual
@@ -45,13 +50,18 @@ While the Verilog design flows described in this Manual can target multiple FPGA
 > [!NOTE]🚧- Anyone can work on this... It probably should link to an overview presentation  
 
 ## Introduction To Kit Hardware  
-### Gowin FPGA Board - Tang-Nano Introduction  
+### Gowin FPGA Board - Tang-Nano Introduction 
+
 #### 🛠️ LAB Activity: Install of the Gowin Tang-Nano FPGA tools - Installation & Build Steps  
 > [!NOTE]🚧- ❎- STEAM Clown will update this later
 In this 🛠️ Lab Activity, you are going to install the Gowan Tang-Nano FPGA tools.  You will verify that the installation is correct and ready to run the subsequent Verilog Labs. 
 
-### Gowin FPGA Board - Tang-Nano Setup & Hardware Connections    
-> [!NOTE]🚧- This section will show the connection of all the hardware, GPIO board, Display, Utrasonie, etc...
+#### 🛠️ LAB Activity: Gowin FPGA Board - Tang-Nano Setup & Hardware Connections    
+> [!NOTE]🚧- This section will show the connection of just the FPGA Board & GPIO board
+
+#### 🛠️ LAB Activity: Hello World - Blinking An LED    
+> [!NOTE]🚧- This section will show the working design, running the scripts, and seeing that the hardware works, proving that your systems is working.
+
 
 ---
 ## Verilog Labs
@@ -96,7 +106,7 @@ Some code in Verilog
 ```Verilog
 Some code in Verilog
 ```
-###### Challenge #1
+###### 🛠️ LAB Activity: Challenge Name #1
 **Verilog Code**
 Explain the challenge
 ```Verilog
@@ -105,7 +115,7 @@ Some code in Verilog
 **What Success Looks Like**
 describe what a successful completion of the lab looks like
 
-###### Challenge #2
+###### 🛠️ LAB Activity: Challenge Name #2
 **Verilog Code**
 Explain the challenge
 ```Verilog
