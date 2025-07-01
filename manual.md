@@ -88,7 +88,8 @@ Some code in Verilog
 ##### Target Hardware Setup and Pin Description
 > [!NOTE] - This section should link to a presentation.
 > [!NOTE] - This section should have a picture showing the Gowin FPGA and GPIO module and the connections
-**GPIO Module - Hardware:** discription of hardware module and pins description as it's used i this lab.  
+**GPIO Module - Hardware:** discription of hardware module and pins description as it's used i this lab.
+![Basic Board Setup For Gates & Mux Labs](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/verilog-gowin-gpio-01.png))
 **GPIO Module - Pin Description:**
 > [!NOTE] - This should be a table of 3 columns: periferal pin, FPGA pin, Description
 |   Peripheral Pin  |     FPGA Pin      |          Description                                    |
