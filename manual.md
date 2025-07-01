@@ -16,13 +16,19 @@ If you want to show you are still working or done, add the following:
 
 ---
 ### Links That will be deleted later
-* [MD cheat sheet](https://www.markdownguide.org/cheat-sheet/)
-* [Old Google Document](https://docs.google.com/document/d/1Z1MZMz6SOwn6kjaCy0DiFt3yNVrN_1zEZgmNQC1ft-Q/edit?usp=sharing)
-Presentations:
+**Verilog Text Books**
+* 
+**OLD Google Doc - jorge.zavala@gmail.com**
+* [Old Google Document](https://docs.google.com/document/d/1Z1MZMz6SOwn6kjaCy0DiFt3yNVrN_1zEZgmNQC1ft-Q/edit?usp=sharing)  
+**Yuri's Presentations**
 * [Workforce Development](https://bit.ly/ee-workforce-devel)
 * [Verilog Meetup LA](https://bit.ly/Verilog-Meetup-in-LA-2024-08-31)
 * [ADA Univ](https://bit.ly/ada-univ-sv-fpga-2024)
 * [HackerDojo](https://bit.ly/Yuri-Panchul-Hacker-Dojo-2024-01-14)
+**Other Stuff to sort**
+*
+**Github Markdown**
+* [MD cheat sheet](https://www.markdownguide.org/cheat-sheet/)
 
 ---
 # Verilog Hackathon Education Kit Manual
