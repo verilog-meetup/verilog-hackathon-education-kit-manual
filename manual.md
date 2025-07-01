@@ -89,15 +89,16 @@ Some code in Verilog
 > [!NOTE] - This section should link to a presentation.
 > [!NOTE] - This section should have a picture showing the Gowin FPGA and GPIO module and the connections
 **GPIO Module - Hardware:** discription of hardware module and pins description as it's used i this lab.
-![Basic Board Setup For Gates & Mux Labs](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/verilog-gowin-gpio-01.png))
+![Basic Board Setup For Gates & Mux Labs](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/verilog-gowin-gpio-01.png)
 **GPIO Module - Pin Description:**
 > [!NOTE] - This should be a table of 3 columns: periferal pin, FPGA pin, Description
-|   Peripheral Pin  |     FPGA Pin      |          Description                                    |
+| HW-154 Board Pin  |     FPGA Pin      |          Description                                    |
 | ----------------- | ----------------- | ------------------------------------------------------- |
-| Pin Name / Number | Pin Name / Number |       Short Description                                 |
-| Pin Name / Number | Pin Name / Number |       Short Description                                 |
-| Pin Name / Number | Pin Name / Number |       Short Description                                 |
-| Pin Name / Number | Pin Name / Number |       Short Description                                 |
+| J1-DIO            | GPIO-25           | DIO data channel for HW-154 LED&Key Board               |
+| J1-CLK            | GPIO-26           | CLK (Clock) for synchronizing the data transfer         |
+| J1- STB           | GPIO-27           | STB (Strobe) chip select or enable for communication    |
+| J1- GND           | GND               | GND                                                     |
+| J1- VCC           | VCC 3.3 V         | VCC 3.3 V                                               |
 
 ##### Target Software, Tools, Libraries & Drivers Setup
 > [!NOTE] - This section will cover any specific software, tools, Libraries or Drivers that are used
