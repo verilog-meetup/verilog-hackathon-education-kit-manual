@@ -46,14 +46,12 @@ While the Verilog design flows described in this Manual can target multiple FPGA
 
 ## Introduction - Verilog Hackathon Education Kit
 > [!NOTE]🚧- Anyone can work on this... It is just a short overview of the kit, golas, and how to use it
-## Introduction to The Verilog Language & Syntax
-> [!NOTE]🚧- This section will give a overview of the Verilog language, and have a few sections on the Verilog syntax, but not have labs.  Some topics and sections are as follows:  
-### Introduction to Digital Design & The Verilog Language  
+## Introduction to Digital Design & The Verilog Language  
 > [!NOTE]🚧- Anyone can work on this... It probably should link to an overview presentation
 
 **Verilog** is a hardware description language (HDL) used to describe and model digital systems. Instead of drawing schematics, engineers can write Verilog code to define how circuits behave and how they’re built. It is useful when designing systems like processors, memory controllers, or digital signal processing blocks. You can design, build, and parameterize a hardware description of something built from digital logic.
 
-#### Design Abstraction Levels in Verilog
+### Design Abstraction Levels in Verilog
 One of Verilog’s strengths is that it lets you describe hardware at different levels of detail, depending on where you are in the design process. The three most common levels are:
 * **Behavioral Level** – Describes what the system should do, using high-level control structures like if, case, and always. Verilog is an abstraction of the described logic, which can be parameterized, so make code portable and flexible.  At this level, the designer focuses on what the system should do rather than how it will be built. The description is written using code that looks more like a sequence of instructions—these describe behavior over time, usually inside always blocks or with the help of functions and tasks. Think of this like writing a recipe without worrying about the kitchen layout. The actual structure of the hardware isn’t considered here—only the operations and flow.
 * **Register-Transfer Level (RTL)** – Focuses on how data moves between registers and what operations are performed on that data. Most Verilog RTL descriptions are clocked by a system clock. This RTL is the most widely used level for synthesis (turning your design into hardware).  This is the level where most real hardware designs are written. It deals with how data moves between registers and what logical or arithmetic operations are performed in between. It’s all synchronized to a clock. RTL is “synthesizable,” which means you can use it to generate real hardware. In modern terms, if a block of Verilog code can be turned into a circuit by a synthesis tool, it qualifies as RTL.
