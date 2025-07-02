@@ -17,12 +17,13 @@ module hackathon_top
 
     // LCD screen interface
 
-   // input  logic [8:0] x,
-   // input  logic [8:0] y,
+    input  logic [8:0] x,
+    input  logic [8:0] y,
 
-   // output logic [4:0] red,
-   // output logic [5:0] green,
-   // output logic [4:0] blue,
+    output logic [4:0] red,
+    output logic [5:0] green,
+    output logic [4:0] blue,
+
 
     inout  logic [3:0] gpio
 );
