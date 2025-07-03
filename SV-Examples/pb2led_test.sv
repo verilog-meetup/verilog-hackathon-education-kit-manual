@@ -34,8 +34,9 @@ module hackathon_top
 
     //assign led [0] = key [0];
 
-    // Exercise 1: Change the code above.
-    // Assign to led [0] the result of OR operation (|).
+    // Below the input Push Buttons, key [0] through key [7] are 
+    // assigned to a wire pb_key_0 through pb_key_7 and then that wire 
+    // is assigned to an output LED, led [0] through led [7]
 
     wire pb_key_0 = key [0];  // Note a new construct - wire
     wire pb_key_1 = key [1];
