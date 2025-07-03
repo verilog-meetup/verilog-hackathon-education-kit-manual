@@ -94,9 +94,11 @@ The same Verilog design would be able to reach much higher clock frequency in
 ASIC than on FPGA, due to length of FPGA fabric interconnect, LUT delay and
 fixed placement of elements affecting timing.
 
-### Verilog Design Flow Overview (Simulation, Synthesis, Implementation)
+### Verilog Design Flow Overview
 
 > [!NOTE]🚧- ❎ Max is working on this
+
+![OpenROAD layout result](images/openroad_layout.png)
 
 On a high level, typical design flow has these stages:
 
