@@ -52,7 +52,7 @@ module hackathon_top
     wire pb_key_6 = key [6];
     wire pb_key_7 = key [7];
 
-    assign led [0] = pb_key_0;
+    //assign led [0] = pb_key_0;
     assign led [1] = pb_key_1;
     assign led [2] = pb_key_2;
     assign led [3] = pb_key_3;
@@ -66,7 +66,7 @@ module hackathon_top
   // The output is connected directly to the 7-Segment digit [0]
   // Only when you push the key [0] AND key[1] will the digit light up 
   
-  //assign digit [0] = pb_key_0 & pb_key_1;
+  assign led [0] = pb_key_0 & pb_key_1;
 
   // Exercise 1: Create a new assign statment that uses the wire connected
   // to key [2] and key [3] and implements a OR Logic function, that is output 
