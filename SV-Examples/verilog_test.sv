@@ -66,9 +66,9 @@ module hackathon_top
 
   // Exercise 1: Create a new assign statment that uses the wire connected
     // to key [1] and key [6] and implements a OR Logic function, that is output 
-    // to digit [7]
+    // to led [7]
   // Add your assign statment below:
-    assign led [7] = pb_key_1 | pb_key_6;
+  
   
   // no code below this comment 
 endmodule
