@@ -35,15 +35,11 @@ module hackathon_top
     //assign led [0] = key [0];
     //------------------------------------------------------------------------
     
-    
-    
-   
-
     // Below the input Push Buttons, key [0] through key [7] are 
     // assigned to a wire pb_key_0 through pb_key_7 and then that wire 
     // is assigned to an output LED, led [0] through led [7]
 
-    wire pb_key_0 = digit [0];  // Note a new construct - wire
+    wire pb_key_0 = key [0];  // Note a new construct - wire
     wire pb_key_1 = key [1];
     wire pb_key_2 = key [2];
     wire pb_key_3 = key [3];
@@ -52,8 +48,8 @@ module hackathon_top
     wire pb_key_6 = key [6];
     wire pb_key_7 = key [7];
 
-    //assign led [0] = pb_key_0;
-    assign led [1] = pb_key_1;
+    // assign led [0] = pb_key_0;
+    // assign led [1] = pb_key_1;
     assign led [2] = pb_key_2;
     assign led [3] = pb_key_3;
     assign led [4] = pb_key_4;
