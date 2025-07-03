@@ -34,8 +34,9 @@ module hackathon_top
 
     //assign led [0] = key [0];
 
-    // Exercise 1: Change the code above.
-    // Assign to led [0] the result of OR operation (|).
+    // Below the input Push Buttons, key [0] through key [7] are 
+    // assigned to a wire pb_key_0 through pb_key_7 and then that wire 
+    // is assigned to an output LED, led [0] through led [7]
 
     wire pb_key_0 = key [0];  // Note a new construct - wire
     wire pb_key_1 = key [1];
@@ -54,7 +55,19 @@ module hackathon_top
     assign led [5] = pb_key_5;
     assign led [6] = pb_key_6;
     assign led [7] = pb_key_7;
+
+  // The following assign is creating an AND Logic function with the Wire 
+  // connected to the Key [0] and key [1]
+  // The output is connected directly to the 7-Segment digit [0]
+  // Only when you push the key [0] AND key[1] will the digit light up 
   
+  assign digit [0] = pb_key_0 & pb_key_1;
 
+  // Exercise 1: Create a new assign statment that uses the wire connected
+  // to key [2] and key [3] and implements a OR Logic function, that is output 
+  // to digit [1]
+  // Add your assign statment below:
 
+  
+  // no code below this comment 
 endmodule
