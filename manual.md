@@ -91,7 +91,7 @@ would be made. And if there would be a fault in the design, a fix would cost a
 lot of additional time and money.
 
 The same Verilog design would be able to reach much higher clock frequency in
-ASIC than on FPGA, due to length of FPGA fabric interconnect, LUT delay and
+ASIC than on FPGA, due to length of FPGA interconnect fabric, LUT delay and
 fixed placement of elements affecting timing.
 
 ### Verilog Design Flow Overview
