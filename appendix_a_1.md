@@ -12,9 +12,9 @@ three languages: Verilog-2001, Vera and Superlog, with some features from
 VHDL, plus three special mini languages added: for random constraints,
 functional coverage groups and concurrent assertions. SystemVerilog added
 improved constructs, such as “always_comb” instead of “always @*” to help
-the designer avoid some common bugs. Some features were added to the
-standard but very rarely used by design or verification engineers, an
-example of such a feature is the “program” keyword.
+the designer avoid some common bugs. There are also some features that were
+added to the standard but very rarely used by design or verification
+engineers, an example of such a feature is the “program” keyword.
 
 For this manual and its associated examples, we have defined a minimal
 subset of SystemVerilog, along with guidelines that facilitate reliability.
