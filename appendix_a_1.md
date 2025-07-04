@@ -42,7 +42,7 @@ always_comb
 
 // Synthesis will infer AND gate feeding a D-flip-flop
 
-always_if @ (posedge clock)
+always_ff @ (posedge clock)
     b <= c & d;
 ```
 
@@ -68,6 +68,7 @@ find handy:
 
 ```Verilog
 wire w3 = b & c;
+```
 
 It is equivalent to:
 
