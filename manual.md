@@ -1,7 +1,10 @@
 # Verilog Hackathon Education Kit Manual  
 > [!NOTE] I will be doing a template update before Noon Monday June 30... if you want to start thinking, please do, but maybe don't actually make edits.
 ---
-### Methods to show progress:
+### Delete Later - Do List - any one can pick these up and do them:
+> [ToDo] 🚧- Update any section paragraphs to have breaks to make them more readable. make these breaks 78 characters to accommodate 78+CR+LF
+
+### Delete Later - Methods to show progress:
 If you want to show you are still working or done, add the following:  
 > [!NOTE]🚧- Construction emoji, means you are still working on this section  
 > [!NOTE]✅- Done with this task
@@ -9,7 +12,7 @@ If you want to show you are still working or done, add the following:
 > [!NOTE]📝- This is a note to others. You can assign these notes to all or to a specific person.  
 > [!NOTE]❎- If you see a note 📝 assigned to you or if you are going to accept it, replace it with a ❎  
 
-### Notes to Writers:
+### Delete Later - Notes to Writers:
 > [!NOTE] - Suggest a better title for this document  
 > [!NOTE] - Just so you know, I'm (STEAM Clown) an going to be just editing this doc in place, so if you make a fork, just make sure you check it in correctly
 > [!NOTE]🚧- I'm going to add a lab template, where we can each pick a lab and update that section.  
