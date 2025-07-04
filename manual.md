@@ -21,8 +21,17 @@ If you want to show you are still working or done, add the following:
 
 ---
 ### Links That will be deleted later
-**Verilog Text Books**
-* 
+**Verilog Text Books & Tutorials**
+* [NOT A LINK WE CAN SHARE - Digital Design and Computer Architecture](https://www.r-5.org/files/books/computers/hw-layers/hardware/digital-desigh/David_Harris_Sarah_Harris-Digital_Design_and_Computer_Architecture-EN.pdf)
+* [https://www.asic-world.com/verilog/veritut.html](https://www.asic-world.com/verilog/veritut.html)
+* [https://www.chipverify.com/tutorials/verilog](https://www.chipverify.com/tutorials/verilog)
+* [https://nandland.com/learn-verilog/](https://nandland.com/learn-verilog/)
+* [Maybe some examples - https://www.fpga4fun.com/](https://www.fpga4fun.com/)
+* [Some Gowin Tang Examples - https://learn.lushaylabs.com/](https://learn.lushaylabs.com/)
+* [More Examples - https://github.com/zapta/apio-examples/tree/master/examples/sipeed-tang-nano-9k](https://github.com/zapta/apio-examples/tree/master/examples/sipeed-tang-nano-9k)
+* [Maybe... - https://www.fpga4student.com/](https://www.fpga4student.com/)
+* [http://www.sunburst-design.com/papers/}(http://www.sunburst-design.com/papers/)
+
 **OLD Google Doc - jorge.zavala@gmail.com**
 * [Old Google Document](https://docs.google.com/document/d/1Z1MZMz6SOwn6kjaCy0DiFt3yNVrN_1zEZgmNQC1ft-Q/edit?usp=sharing)  
 **Yuri's Presentations**
