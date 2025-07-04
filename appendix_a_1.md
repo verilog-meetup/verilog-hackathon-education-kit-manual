@@ -32,7 +32,7 @@ variables: “reg” and “wire”. In synthesis, “wire” always inferred
 combinational logic, but “reg” may infer either combinational logic, or
 registers that consist of D-flip-flops, or even be used to model D-latches.
 
-```Verilog
+```SystemVerilog
 reg a, b;
 
 // Synthesis will infer AND gate
@@ -51,7 +51,7 @@ block and cannot be assigned using the “assign” construct. It also cannot be
 connected to an output port of a submodule instance. All this usage is
 possible with “wire”:
 
-```Verilog
+```SystemVerilog
 wire w1, w2;
 assign w1 = b & c;
 submodule submodule_instance (.clock (clock), .out_port (w2));
@@ -66,41 +66,41 @@ In our examples we never use “reg” and mostly use “logic”. However, ther
 a special case when we use “wire”. This case is the following shortcut we
 find handy:
 
-```Verilog
+```SystemVerilog
 wire w3 = b & c;
 ```
 
 It is equivalent to:
 
-```Verilog
+```SystemVerilog
 wire w3;
 assign w3 = b & c;
 ```
 
 It is also equivalent to:
 
-```Verilog
+```SystemVerilog
 logic w3;
 assign w3 = b & c;
 ```
 
 It is also equivalent to:
 
-```Verilog
+```SystemVerilog
 logic w3;
 always_comb w3 = b & c;
 ```
 
 However, it is _not_ equivalent to:
 
-```Verilog
+```SystemVerilog
 logic w3 = b & c;
 ```
 
 The language designers made the last construct equivalent to initialization
 before the simulation time 0:
 
-```Verilog
+```SystemVerilog
 logic w3;
 initial w3 = b & c;
 ```
