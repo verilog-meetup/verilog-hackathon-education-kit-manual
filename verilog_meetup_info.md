@@ -24,4 +24,15 @@ Hacker Dojo, 855 Maude Ave
 Mountain View, California 94043, USA
 
 yuri@panchul.com
+
 yuri.panchul@gmail.com
+
+Logos:
+
+![pipe_logo_160ppi_transparent.png](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/pipe_logo_160ppi_transparent.png)
+
+![pipe_logo_160ppi_white.png](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/pipe_logo_160ppi_white.png)
+
+[pipe_logo_300ppi_transparent.png](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/pipe_logo_300ppi_transparent.png)
+
+[pipe_logo_300ppi_white.png](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/pipe_logo_300ppi_white.png)
