@@ -2,9 +2,9 @@
 
 ![Basic Board Setup 1](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/basic_board_setup_1.jpg)
 
-![Basic Board Setup 2](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/basic_board_setup_2.jpg)
+[Basic Board Setup 2](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/basic_board_setup_2.jpg)
 
-![RTL2GDSII](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/rtl2gdsii.jpg)
+![RTL2GDSII](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/rtl2gdsii.png)
 
 [verilog-meetup.com](https://verilog-meetup.com/)
 
