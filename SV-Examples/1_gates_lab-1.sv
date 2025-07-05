@@ -42,6 +42,6 @@ module hackathon_top
 
     assign led [1] = a ^ b; // XOR - eXclusive OR
 
-    // END_SOLUTION
+    // END_SOLUTION 
 
 endmodule
