@@ -113,3 +113,103 @@ is effectively a “wire” and “bit” is similar to “logic”, but “bit�
 only the values of “0” and “1” in simulation, unlike more standard “logic”
 that can take the values “0”, “1”, “x” and “z”. See the IEEE 1800-2023
 standard if you are curious and would like to see more details.
+
+### A.2. Use blocking assignments with always_comb, non-blocking with always_ff
+
+Even though Verilog is used to describe hardware with lots of processes going
+in parallel, it still has to be simulated on a computer with a CPU, that
+can only execute one instruction at a time. For parallel processes to be
+executed sequentially, Verilog standard defines event queues and event
+regions. Region is a phase of execution, every event has certain region
+assigned to it. Events in one region are queued for execution without
+deterministic order, but only when all events in current region of execution
+are evaluated, simulation advances to the next region.
+
+Originally, plain Verilog had only blocking assignments. The problem was
+that blocking assignments are executed in active event region with most of
+other events like evaluation of the right-hand side of expression.
+
+This could lead to race conditions:
+
+```Verilog
+reg a, b, c;
+
+always @(posedge clk) a = b;
+always @(posedge clk) c = a;
+```
+
+Both RHS and LFS or these expressions change in one region, so there is no
+determinism: either `a` can be assigned a value of `b`, and then that
+value would be assigned to `c`, or the old value of `a` could be assigned
+to `c` before beeing updated with `b`.
+
+To solve this issue, non-blocking assignments has been introduced to the
+language with NBA event region. NBA event region goes after active, thus
+it is guaranteed that all events in active region would be executed by the
+time of assignment. RHS of NBA assignments is still evaluated in active
+region, NBA region only updates signals with pre-calculated values.
+
+```Verilog
+reg a, b, c;
+
+always @(posedge clk) a <= b;
+always @(posedge clk) c <= a;
+```
+
+In the code above, `c` would be updated with 'old' value of `a` that was
+sampled in active region. The assignment to `a` in NBA region doesn't affect
+`c`.
+
+Another advantage of non-blocking assignments is description of shift
+registers without temporary variables.
+
+Let's say we want to describe two registers connected together:
+
+```SystemVerilog
+logic a, b, c;
+
+always_ff @(posedge clk) begin
+    b = a;
+    c = b;
+end
+```
+
+In the begin-end block assignments are executed in order, so we don't have
+to worry about races between these signals (although races with other blocks
+can still occur). But because both RHS and LHS of the expressions are
+evaluated in the same region, the value of `a` would 'fall through' to
+`c` via intermediate variable `b` without getting delayed by 1 clock cycle.
+
+In other words, it is an equivalent of:
+
+```SystemVerilog
+logic a, c;
+
+always_ff @(posedge clk) begin
+    c = a;
+end
+```
+
+To solve this issue, non-blocking assignments should be used:
+
+```SystemVerilog
+logic a, b, c;
+
+always_ff @(posedge clk) begin
+    b <= a;
+    c <= b;
+end
+```
+
+As in previous example, the value of `b` would be sampled before it is
+changed by the assignment. So 2 clock cycles are needed to propagate the
+value of `a` to `c`.
+
+In conclusion, edge sensitive always blocks should always be used with
+non-blocking assignments to avoid races, with the exception of intermediate
+variables that are not used outside of the block.
+
+Blocking assignments are used with `always_comb` and `assign`, because
+combinational logic doesn't depend on clock edge and can be re-evaluated
+after signal change. Non-blocking assignments are unnecessary and would lead
+to additional re-evaluations of these blocks, hurting simulation performance.
