@@ -80,27 +80,30 @@ One of Verilog’s strengths is that it lets you describe hardware at different 
 Verilog is widely used because it scales well with complexity. It's much easier to manage a large project in Verilog than with a schematic. Designs written in Verilog are portable. They don’t depend on a specific chip or manufacturing process, which makes it easier to reuse and adapt them to FPGA or ASIC design flows.    
 
 Verilog gives hardware engineers a way to write and test their designs using code. This approach makes debugging, simulation, and development faster and more flexible.  This is important for modern parameterized digital systems that would be impractical to handle graphically with Schematics.  
-  
+
 ### ASIC vs FPGA: What’s the Difference?
 
-> [!NOTE]🚧- ❎ Max is working on this, I'm planning to add some images later
+> [!NOTE]🚧- ❎ Max is working on this
 
-ASIC chip is manufactured from scratch according to certain design, this means
-that any logic could be used that is present in ASIC library (that is a list of
-very basic logic primitives like INV, AND, OR, certain types of flip-flops that
-could be used) and satisfy library rules.
+ASIC chip is manufactured from library elements (that is a list of
+very basic logic primitives like INV, AND, OR, different types of flip-flops
+that could be used). Types, quantities, placement and connections between the
+elements are design specific.
 
-On the other hand, FPGA chip is manufactured with generic logic elements, and
-the Verilog design is mapped on pre-existing logic and then connected accordingly.
-Instead of making combinational logic out of separate gates, FPGA utilizes LUTs
-(lookup tables) that allow configuring generic table into any logic function.
+On the other hand, FPGA chip is manufactured with reconfigurable logic
+elements, and the Verilog design is mapped on pre-existing logic and then
+connected accordingly. Instead of making combinational logic out of certain
+primitives, FPGA utilizes LUTs (lookup tables) that allow configuring generic
+table into any logic function.
 
-So on FPGA you are limited with existing logic blocks, while ASIC limits you
-with generic area for utilization. FPGA is a great platform for prototyping,
-because you can easily reconfigure the chip after making changes in Verilog
-source code.
-Meanwhile ASIC is a huge commitment, because after sending the final design to
-the factory you have to wait for several months before the first batch of chips
+So on FPGA you are limited with existing number of LUTs, memories, and other
+utility blocks like multipliers, while for ASIC you can use any number of
+library elements as long as you have area on the die to fit them.
+
+FPGA is a great platform for prototyping, because you can easily
+reconfigure the chip after making changes in Verilog source code. Meanwhile
+ASIC is a huge commitment, because after sending the final design to the
+factory you have to wait for several months before the first batch of chips
 would be made. And if there would be a fault in the design, a fix would cost a
 lot of additional time and money.
 
