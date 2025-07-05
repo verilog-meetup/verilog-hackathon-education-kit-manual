@@ -81,10 +81,54 @@ Verilog is widely used because it scales well with complexity. It's much easier 
 
 Verilog gives hardware engineers a way to write and test their designs using code. This approach makes debugging, simulation, and development faster and more flexible.  This is important for modern parameterized digital systems that would be impractical to handle graphically with Schematics.  
   
-### ASIC vs FPGA: What’s the Difference?  
-> [!NOTE]🚧- Anyone can work on this... It probably should link to an overview presentation  
-### Verilog Design Flow Overview (Simulation, Synthesis, Implementation)  
-> [!NOTE]🚧- Anyone can work on this... It probably should link to an overview presentation  
+### ASIC vs FPGA: What’s the Difference?
+
+> [!NOTE]🚧- ❎ Max is working on this, I'm planning to add some images later
+
+ASIC chip is manufactured from scratch according to certain design, this means
+that any logic could be used that is present in ASIC library (that is a list of
+very basic logic primitives like INV, AND, OR, certain types of flip-flops that
+could be used) and satisfy library rules.
+
+On the other hand, FPGA chip is manufactured with generic logic elements, and
+the Verilog design is mapped on pre-existing logic and then connected accordingly.
+Instead of making combinational logic out of separate gates, FPGA utilizes LUTs
+(lookup tables) that allow configuring generic table into any logic function.
+
+So on FPGA you are limited with existing logic blocks, while ASIC limits you
+with generic area for utilization. FPGA is a great platform for prototyping,
+because you can easily reconfigure the chip after making changes in Verilog
+source code.
+Meanwhile ASIC is a huge commitment, because after sending the final design to
+the factory you have to wait for several months before the first batch of chips
+would be made. And if there would be a fault in the design, a fix would cost a
+lot of additional time and money.
+
+The same Verilog design would be able to reach much higher clock frequency in
+ASIC than on FPGA, due to length of FPGA interconnect fabric, LUT delay and
+fixed placement of elements affecting timing.
+
+### Verilog Design Flow Overview
+
+> [!NOTE]🚧- ❎ Max is working on this
+
+![OpenROAD layout result](images/openroad_layout.png)
+
+On a high level, typical design flow has these stages:
+
+* **RTL design** - Writing Verilog code
+* **Verification** - Running Verilog code in simulation with a test program,
+that checks the output of RTL against software model
+* **Synthesis** - Converting Verilog description into a gate-level netlist of
+primitives for target architecture. Netlist specifies elements and connections
+between them, they are not physically placed yet.
+* **Place and Route** - Assigning elements a place on the chip, then routing
+them together
+
+* [ASIC specific] **GDSII** - Final topology file is created that is sent to the
+factory
+* [FPGA specific] **Bitstream generation** - Generate bitstream and upload to
+the board
 
 ## Introduction To Kit Hardware  
 ### Gowin FPGA Board - Tang-Nano Introduction 
