@@ -1,11 +1,11 @@
 ## Appendix A. A subset of the SystemVerilog language that we use in this manual
 
 SystemVerilog is a result of long language evolution. When the original
-Verilog appeared in 1984, it was intended for simulation, not synthesis. The
-design of some language features provoked designers to make bugs, such as
-race conditions when using blocking assignments in edge-sensitive always
-blocks. Some constructs, such as “reg” ended up being used not in a way
-their name suggests (“reg” is not always a register).
+Verilog appeared in 1984, the design of some language features provoked
+designers to make bugs, such as race conditions when using blocking
+assignments in edge-sensitive always blocks. Some constructs, such as “reg”
+ended up being used not in a way their name suggests (“reg” is not always
+a register).
 
 SystemVerilog, which development started in 2001, is effectively a mix of
 three languages: Verilog-2001, Vera and Superlog, with some features from
