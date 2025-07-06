@@ -3,24 +3,23 @@
 An electronic company designs a chip through the collaboration of several
 teams:
 
-1. The technical marketing team, which defines what the customers expect
-from a design. By customer we mean system design companies that use chips as
+1. The technical marketing team defines what the customers expect from a
+design. By customer we mean system design companies that use chips as
 components in their products: telephones, medical devices, embedded
 computers inside spaceships.
 
-2. Architecture team that puts a document, the architecture spec, which
-defines a high-level structure how different blocks divide the
-functionality. The example of functionality is replacing a header in a
-network packet or rotating in 3D space a triangle in GPU.
+2. Architecture team puts a document, the architecture spec, which defines a
+high-level structure how different blocks divide the functionality. The
+example of functionality is replacing a header in a network packet or
+rotating in 3D space a triangle in GPU.
 
-3. RTL (Register Transfer Level) design team, where each block's
-microarchitect converts the architecture spec into a more detailed
-microarchitecture spec for his block, defining how to implement the required
-function using clocks, logical formulas and structures that consist of
-D-flip-flops, the storage elements. The RTL design engineer writes code in
-SystemVerilog based on this specification.
+3. RTL (Register Transfer Level) design team converts the architecture spec
+into a set of more detailed microarchitecture specs for each block, defining
+how to implement the required functionality using clocks, logical formulas
+and structures that consist of D-flip-flops, the storage elements. An RTL
+design engineer writes code in SystemVerilog based on this specification.
 
-4. The modeling team writes the programs in C++ and Python that imitate the
+4. The modeling team writes programs in C++ and Python that imitate the
 action of RTL blocks. Such program, called a model, usually follows the
 architecture spec, but not the microarchitecture spec. Instead of modeling
 clocks, the models works with so-called transactions, groups of data
