@@ -53,14 +53,16 @@ ensure its compatibility with the hardware of the new chip on the market.
 The pictures above are created by Yuri Panchul for the article in
 [aireport.ru/ai_hardware](https://aireport.ru/ai_hardware).
 
-*To put in the main text*
+---
+
+**To put in the main text**
 
 RTL design is the central methodology to design a digital part of a chip,
 but this is only a part of a much larger team effort. We are not going to
 describe in this manual other parts, such as the art of functional
 verification or the dark magic of the physical design, but you can get a
-brief overview in -Appendix B. The role of RTL design in the whole chip
-project in an electronic company-.
+brief overview in *Appendix B. The role of RTL design in the whole chip
+project in an electronic company*.
 
 RTL engineer together with a physical design engineer use the following
 flow, called RTL-to-GDSII flow:
