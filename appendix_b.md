@@ -46,13 +46,6 @@ congestion.
 architecture team on the device drivers, compilers and other software to
 ensure its compatibility with the hardware of the new chip on the market.
 
-![The chip design team by blocks](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/team_1_by_blocks.png)
-
-![A block design team](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/team_2_block.png)
-
-The pictures above are created by Yuri Panchul for the article in
-[aireport.ru/ai_hardware](https://aireport.ru/ai_hardware).
-
 ---
 
 **To put in the main text**
@@ -72,3 +65,12 @@ flow, called RTL-to-GDSII flow:
 The flow for FPGA is similar but has the following differences:
 
 ...
+
+---
+
+![The chip design team by blocks](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/team_1_by_blocks.png)
+
+![A block design team](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/team_2_block.png)
+
+The pictures above are created by Yuri Panchul for the article in
+[aireport.ru/ai_hardware](https://aireport.ru/ai_hardware).
