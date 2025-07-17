@@ -470,7 +470,8 @@ This makes a MUX useful for choosing between signals, such as:
 A 2-to-1 MUX has:
 * 2 data inputs: in0 and in1
 * 1 select input: sel
-* 1 output: out  
+* 1 output: out
+
 **2-to-1 MUX: Truth Table**
 when you look at this truth table, notice that when the sel is low, it will alow the input signal in0 to be propogated to the out signal.  When the sel signal is low or "0", it does not mater or care wha the in1 signal is. Only the in0 signal is propogated.  When sel is high or "1", then the in0 is ingnored, and the in1 signal is propogated.
 
@@ -481,14 +482,14 @@ when you look at this truth table, notice that when the sel is low, it will alow
 | 1     | 0     | X     | 0     |
 | 1     | 1     | X     | 1     |
 
-<pre>              ┌────────────┐
+<pre>               ┌────────────┐
     in0 ─────▶│            │
-              │            │
-              │   2-to-1   │─────▶ out
+               │            │
+               │   2-to-1   │─────▶ out
     in1 ─────▶│    MUX     │
-              │            │
+               │            │
     sel ─────▶│  select=sel│
-              └────────────┘
+               └────────────┘
 </pre>
 
 In the following labs you will explore the Verilog syntax and coding structures to build Logic Multiplexer (Mux's)
