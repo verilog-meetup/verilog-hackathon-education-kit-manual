@@ -483,7 +483,7 @@ when you look at this truth table, notice that when the sel is low, it will alow
 | 1     | 1     | X     | 1     |
 
 <pre>               ┌────────────┐
-    in0 ─────▶│            │
+    in0 ─────▶ │            │
                │            │
                │   2-to-1   │─────▶ out
     in1 ─────▶│    MUX     │
