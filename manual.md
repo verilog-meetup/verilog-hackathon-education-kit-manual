@@ -382,24 +382,26 @@ cd gowin/basics-graphics-music/hackathon/problems/1_gates_and_muxes
 
 **What Success Looks Like** - Only when both buttons **key[0]** and **key[1]** are pressed (value 1), **led[0]** will be turned ON (1)
 
+#### 🛠️ LAB Activity #2: Change AND to OR  
 
-
-
-
-
-##### Exercise 1: Change AND to OR
-change the code **assign led [0] = key [0] & key [1];** to preform an **OR** assignment 
+**Challenge:** Change the code **assign led [0] = key [0] & key [1];** to preform an **OR** assignment 
 
 **Hint**: \| is the bitwise OR operator. When you replace the & bitwise operator with \| the the result assigned to the led[0] is true (1) if either key[0] or key[1] is pressed. 
 <pre>   key[0] ----\ 
                OR ---> led[0] 
    key[1] ----/ </pre>
 
-Edit your code, save it, and in your consol window, run the bash script **03_synthesize_for_fpga.bash**
+Edit your code, save it, 
 
+**Running the FPGA Bash scripts**
+* Save any edits to hackathon_top.sv, then in your console, run the bash **03_synthesize_for_fpga.bash** script
+```Bash
+./03_synthesize_for_fpga.bash
+```
 **Success?** When you press the key[0] the led[0] should now light up.  if you then only press key[1], the led[0] should also still light up.  If you press both key[0] and key[1], led[0] should also light up, because this is a bitwise **OR** will respond to either key[0], key[1] or both.
 
-#### Wire assignments - Aliasing signals  
+#### 🛠️ LAB Activity #3: Wire assignments - Aliasing signals  
+
 **What is a Verilog "wire"?**  
 
 In Verilog, a **wire** is one of the most fundamental data types used to model physical electrical connections. A wire represents a combinational signal. A wire is something that is driven by some other logic but does not store a value on its own.  
@@ -414,7 +416,7 @@ In Verilog, a **wire** is one of the most fundamental data types used to model p
  - Improving readability with aliases.
 
 **Example Verilog Code With Wire Assignments**
-```
+```Verilog
   wire a = key[0];
   wire b = key[1];
   assign led[0] = a & b;
@@ -433,13 +435,27 @@ Take a look at these diagrams and make sure you understand that they are equvele
    key[1] ----> b ----/</pre>
 </pre>
 
-##### Exercise 2: Use a wire assignment
+**Challenge:** Use a wire assignment to create an **XOR** gate
+* Create some "wires".  Assign key[0] to a wire lable "a", and key[1] to a wire lable "b"
+* Update the Logical Gate oporator to the **XOR** operation using the "^" charactor. 
 
-```
+```Verilog
     wire a = key [0];  // Note a new construct - wire
     wire b = key [1];
 
     assign led [1] = a ^ b; // XOR - eXclusive OR
+```
+**Running the FPGA Bash scripts**
+* Save any edits to hackathon_top.sv, then in your console, run the bash **03_synthesize_for_fpga.bash** script
+```Bash
+./03_synthesize_for_fpga.bash
+```
+**Success?** When you press the key[0] or the key[1] the led[0] should now light up.  This Logical Operation is exclusive, which means that the Logic will be asserted high only when either key[0] or key[1] is pressed, which will turn on the led[1]. If you press both key[0] and key[1], led[0] should not light up.  the same as if you did not push any keys.  This is an example of an exculusive operation, **XOR** when the inputs need to be differend.  It's one or the other input is asserted, but not both inputs.
+
+##### Next Steps - Dig Deeper
+Provide some additional resources or assignments to look at for Logical Gates
+
+
 
     //------------------------------------------------------------------------
 
@@ -561,7 +577,7 @@ endmodule
 ```Verilog
 Some code in Verilog
 ```
-###### 🛠️ LAB Activity: Challenge Name #1
+##### 🛠️ LAB Activity: Challenge Name #1
 **Verilog Code**
 Explain the challenge
 ```Verilog
@@ -570,7 +586,7 @@ Some code in Verilog
 **What Success Looks Like**
 describe what a successful completion of the lab looks like
 
-###### 🛠️ LAB Activity: Challenge Name #2
+##### 🛠️ LAB Activity: Challenge Name #2
 **Verilog Code**
 Explain the challenge
 ```Verilog
