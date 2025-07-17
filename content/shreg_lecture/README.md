@@ -1,1 +1,1 @@
-# Сюда кидать материалы к статье про Shreg
+# This is a test article on Russian language about the shift register
