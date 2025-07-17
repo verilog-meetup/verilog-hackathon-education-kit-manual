@@ -150,21 +150,16 @@ In this 🛠️ Lab Activity, you are going to install the Gowan Tang-Nano FPGA 
 ---
 The following are the Labs that are found in the [Basic Music - Hackation](https://github.com/verilog-meetup/basics-graphics-music) in the [Problems](https://github.com/verilog-meetup/basics-graphics-music/tree/main/hackathon/problems) directory.  Make sure you follow the instructions to git clone and copy these design files.
 
-### Gates & Muxes
-#### Gates & Muxes Introduction
-In this first set of Verilog Labs, you are going to learn about Verilog **Logic Gates** and **Multiplexers** (Mux).  
+### Logical Gates
+#### Logical Gates Introduction
+In this first set of Verilog Labs, you are going to learn about Verilog **Logic Gates**.  
 
 **Logic gates** are the building blocks of digital circuits. They process binary input values (0 or 1) and produce binary outputs based on specific logical rules. You use logic gates to build everything from simple decision-making circuits to complex CPUs and FPGAs.
 * Learn how to create simple logic gates using Verilog.
 * Use wire and assign statements to build AND, OR, XOR, NAND, NOR, and XNOR gates.
 * Control onboard LEDs using push button inputs to visualize the gate behavior.
 
-A **Multiplexer** (MUX) is a digital switch that selects one of several input signals and forwards it to a single output, based on control (select) signals.
-* Build a 2-to-1 MUX using assign out = sel ? in1 : in0;
-* Observe how changing the select signal affects the output LED
-* Learn how to extend MUX structures to support more inputs or wider data
-
-In the following labs you will explore the Verilog syntax and coding structures to build Logic Gates and Mux's
+In the following labs you will explore the Verilog syntax and coding structures to build Logic Gates
 
 #### Target Hardware Setup and Pin Description  
 **HW-154 Board I/O Board - Hardware Connections:** This is the basic pin description & wiring connections from the Gowin FPGA board to the HW-154 Board I/O Board as used in this set of lab challenges.
@@ -455,7 +450,53 @@ Take a look at these diagrams and make sure you understand that they are equvele
 ##### Next Steps - Dig Deeper
 Provide some additional resources or assignments to look at for Logical Gates
 
+### Multiplexers, Making Logical Choices
+#### Multiplexers Introduction
+In this set of Verilog Labs, you are going to learn about Verilog **Multiplexers** (Mux).  
 
+A **Multiplexer** (MUX) is a digital switch that selects one of several input signals and forwards it to a single output, based on control (select) signals.  
+
+You can think of a MUX as a digital switch or traffic controller:
+* If the select line is 0, the output follows input 0
+* If the select line is 1, the output follows input 1
+
+This makes a MUX useful for choosing between signals, such as:
+* Selecting between two or more signals
+* Selecting between two sensors
+* Switching between operating modes
+* Routing data in processors
+
+**2-to-1 MUX: How It Works**
+A 2-to-1 MUX has:
+* 2 data inputs: in0 and in1
+* 1 select input: sel
+* 1 output: out  
+**2-to-1 MUX: Truth Table**
+when you look at this truth table, notice that when the sel is low, it will alow the input signal in0 to be propogated to the out signal.  When the sel signal is low or "0", it does not mater or care wha the in1 signal is. Only the in0 signal is propogated.  When sel is high or "1", then the in0 is ingnored, and the in1 signal is propogated.
+
+| `sel` | `in1` | `in0` | `out` |
+| ----- | ----- | ----- | ----- |
+| 0     | X     | 0     | 0     |
+| 0     | X     | 1     | 1     |
+| 1     | 0     | X     | 0     |
+| 1     | 1     | X     | 1     |
+
+<pre>              ┌────────────┐
+    in0 ─────▶│            │
+              │            │
+              │   2-to-1   │─────▶ out
+    in1 ─────▶│    MUX     │
+              │            │
+    sel ─────▶│  select=sel│
+              └────────────┘
+</pre>
+
+In the following labs you will explore the Verilog syntax and coding structures to build Logic Multiplexer (Mux's)
+* Build a 2-to-1 MUX using assign out = sel ? in1 : in0;
+* Observe how changing the select signal affects the output LED
+* Learn how to extend MUX structures to support more inputs or wider data
+
+* 
 
     //------------------------------------------------------------------------
 
