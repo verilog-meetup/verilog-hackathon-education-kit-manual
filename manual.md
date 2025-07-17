@@ -1,23 +1,12 @@
 # Verilog Hackathon Education Kit Manual  
 ---
-### Delete Later - Do List - any one can pick these up and do them:
-> [!NOTE] 2025-07-04 - (STEAM Clown) - I will working on the Gates/Mux section labs today. connect on telegram or interact through this do when you push.  
-> [!NOTE]❓- (STEAM Clown) - Suggest a better title for this document.  Make some suggestions here to have this doc communicate better what we are trying to do.  "teaching verilg, showing steps to implement in hardware, help students gain a marketible skill."  
-> [ToDo] 🚧- (AnyOne) Update any section paragraphs to have breaks to make them more readable. make these breaks 78 characters to accommodate 78+CR+LF  
+### Delete Later - New Messages & Notes:
 
 ### Delete Later - Notes to Writers:
 > [!NOTE] - Just so you know, I'm (STEAM Clown) an going to be just editing this doc in place, so if you make a fork, just make sure you check it in correctly
-> [!NOTE]🚧- I'm going to add a lab template, where we can each pick a lab and update that section.
-  
-### Delete Later - Methods to show progress:
-If you want to show you are still working or done, add the following:  
-> [!NOTE] 🚧- Construction emoji, means you are still working on this section  
-> [!NOTE] ✅- Done with this task
-> [!NOTE] ❌- red "x", means you are not done, have not started, or are in progress
-> [!NOTE] 📝- This is a note to others. You can assign these notes to all or to a specific person.  
-> [!NOTE] ❎- If you see a note 📝 assigned to you or if you are going to accept it, replace it with a ❎  
-> [!NOTE] ❓- your name - Use this to ask a question to other writers/editors  
-> [!NOTE] 🅰️- your name - Use this to aswer the question
+> [!NOTE] 2025-07-04 - (STEAM Clown) - I will working on the Gates/Mux section labs today. connect on telegram or interact through this do when you push.  
+> [!NOTE]❓- (STEAM Clown) - Suggest a better title for this document.  Make some suggestions here to have this doc communicate better what we are trying to do.  "teaching verilg, showing steps to implement in hardware, help students gain a marketible skill."  
+> [ToDo] 🚧- (AnyOne) Update any section paragraphs to have breaks to make them more readable. make these breaks 78 characters to accommodate 78+CR+LF  
 
 ---
 ### Links That will be deleted later
@@ -43,7 +32,8 @@ If you want to show you are still working or done, add the following:
 *
 **Github Markdown**
 * [MD cheat sheet](https://www.markdownguide.org/cheat-sheet/)
-
+---
+---
 ---
 # Verilog Hackathon Education Kit Manual
 ## About This Manual  
@@ -148,12 +138,18 @@ In this 🛠️ Lab Activity, you are going to install the Gowan Tang-Nano FPGA 
 #### 🛠️ LAB Activity: Hello World - Blinking An LED    
 > [!NOTE]🚧- This section will show the working design, running the scripts, and seeing that the hardware works, proving that your systems is working.
 
+> [!NOTE] - What other labs should we have to teach basic Verilog?  
+> [!NOTE] - STEAM CLown - I think that we should have a few more Labs to show using the GPIO board.  Also, maybe we should change the order of the labs, so we can do all the labs focused on the GPIO module before we start looking at the Display. Thoughts?
 
+> [!NOTE] We should have code in this first lab that startes with 
+> assign led [0] = key [0];
+> assign led [1] = key [1];
+> And then have the first lab to connect Led [6] and led[7] to key[6] and key[7]
+> before we have them do the logic gates.
 ---
 ## Verilog Labs
 ---
-> [!NOTE] - The following are the Labs that are in the [Basic Music - Hackation](https://github.com/yuri-panchul/basics-graphics-music/tree/main) in the [Problems](https://github.com/yuri-panchul/basics-graphics-music/tree/main/hackathon/problems) directory.  What other labs should we have to teach basic Verilog?  
-> [!NOTE] - STEAM CLown - I think that we should have a few more Labs to show using the GPIO board.  Also, maybe we should change the order of the labs, so we can do all the labs focused on the GPIO module before we start looking at the Display. Thoughts?  
+The following are the Labs that are found in the [Basic Music - Hackation](https://github.com/verilog-meetup/basics-graphics-music) in the [Problems](https://github.com/verilog-meetup/basics-graphics-music/tree/main/hackathon/problems) directory.  Make sure you followed the instructions to git clone and copy these design files.
 
 ### Gates & Muxes
 #### Gates & Muxes Introduction
@@ -171,6 +167,23 @@ A **Multiplexer** (MUX) is a digital switch that selects one of several input si
 
 In the following labs you will explore the Verilog syntax and coding structurs to build Logic Gates and Mux's
 
+#### Target Hardware Setup and Pin Description  
+**HW-154 Board I/O Board - Hardware Connections:** This is the basic pin discriptions & wiring connections from the Gowin FPGA board to the HW-154 Board I/O Board as used in this set of lab challenges.
+![Basic Board Setup For Gates & Mux Labs](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/verilog-gowin-gpio-01.png)
+
+**GPIO Module - Pin Description:**  
+| HW-154 I/O Board Pin  |     FPGA Pin      |          Description                                    |  
+| ----------------- | ----------------- | ------------------------------------------------------- |  
+| J1-DIO            | GPIO-25           | DIO data channel for HW-154 LED & Key Board             |  
+| J1-CLK            | GPIO-26           | CLK (Clock) for synchronizing the data transfer         |  
+| J1- STB           | GPIO-27           | STB (Strobe) chip select or enable for communication    |  
+| J1- GND           | GND               | GND                                                     |  
+| J1- VCC           | VCC 3.3 V         | VCC 3.3 V                                               |   
+
+#### Target Software, Tools, Libraries & Drivers Setup
+Make you have followed the instructions to install the Gowin tools and applications. See ![Gowin Install Instructions]()
+> [!NOTE] - Add link to Gowin Install Instructions
+
 #### Logic Gates Verilog Code
 Logic gates form the foundation of all digital electronics. These basic building blocks process two or more binary input values/signals (0 and 1) and produce a single binary output based on logical rules. Gates like AND, OR, and XOR enable a wide range of operations.   
 
@@ -179,7 +192,7 @@ They can be simple LED control to complex logic. In Verilog, logic gates are imp
 This set of labs will introduce and let you build Verilog code to implement six fundamental logic gates. You will have an opertunity to build AND, OR, XOR, NAND,  NOR, and XNOR Verilog implementations, connecting Push Button switches to LED's.   
 
 Each gate processes two binary inputs (0 = LOW, 1 = HIGH) and produces a binary output based on a specific logical rule. Let's take a look at the Logic Gate logical rules:
-#### AND 
+##### AND 
 An **AND** gate outputs 1 only if both inputs are 1. This gate is used when multiple conditions must be true to activate a signal. An example would be requiring two buttons to be pressed simultaneously.  
 **Logical Rules**  
 | Gate     | Symbol | Description                                 | Output Rule |  
@@ -190,7 +203,6 @@ An **AND** gate outputs 1 only if both inputs are 1. This gate is used when mult
 ```Verilog
 assign led[0] = key[0] & key[1];
 ```
-
 **Logic Diagram**  
 <pre>   key[0] ----\ 
                AND ---> led[0] 
@@ -204,7 +216,7 @@ assign led[0] = key[0] & key[1];
 | 1       | 0       | 0            |
 | 1       | 1       | 1            |  
 
-#### OR 
+##### OR 
 An **OR** gate outputs 1 if at least one input is 1. It’s used when any of several inputs can activate a result.  An example would let an ouput LED turn on if either button A or button B were presed.  Only one of the inputs needs to be active to create a logical result of a 1 on the output.  
 
 **Logical Rules**  
@@ -216,19 +228,18 @@ An **OR** gate outputs 1 if at least one input is 1. It’s used when any of sev
 ```Verilog
 assign led[1] = key[0] | key[1];  
 ```
-
 **Logic Diagram**  
 <pre> key[0] ----\ 
              OR ---> led[0] 
  key[1] ----/ </pre>
 
 **Truth Table**  
-| Input[1] | Input[0] | Output (OR) |
-| ------- | ------- | ------------ |
-| 0       | 0       | 0            |
-| 0       | 1       | 1            |
-| 1       | 0       | 1            |
-| 1       | 1       | 1            |  
+| Input[1] | Input[0] | Output (OR)  |
+| -------- | -------- | ------------ |
+| 0        | 0        | 0            |
+| 0        | 1        | 1            |
+| 1        | 0        | 1            |
+| 1        | 1        | 1            |  
 
 [!NOTE] I'll add the XOR, NOR,NAND, XNOR later
 
@@ -253,38 +264,38 @@ These 2 comments in Verilog is used by the Bash scripts that generate the FPGA f
 **Top Verilog Block Inputs and Outputs**  
 This section of the Verilog file defines all the Inputs and Outputs of the top level block.  Think of these as physical pins comming into or out of your Top Level Verilog Block.  
 
-```
+```Verilog
 module hackathon_top
 (
+    // System Clocks & Controls  
     input  logic       clock,
     input  logic       slow_clock,
     input  logic       reset,
 
-    // GPIO Board - Switches & LEDs
+    // HW-154 I/O Board - Switches & LEDs  
     input  logic [7:0] key,
     output logic [7:0] led,
 
-    // A dynamic seven-segment display
+    // A dynamic seven-segment display  
     output logic [7:0] abcdefgh,
     output logic [7:0] digit,
 
-    // LCD screen interface
+    // LCD screen interface  
     input  logic [8:0] x,
     input  logic [8:0] y,
-
     output logic [4:0] red,
     output logic [5:0] green,
     output logic [4:0] blue,
 
-    //Serial Connection To GPIO Board
+    // HW-154 I/O Board Communication Channel  
     inout  logic [3:0] gpio
 );
 ```
-We are going to only look at the GPIO Board - Switches & LEDs section
-```
-// GPIO Board - Switches & LEDs
-input  logic [7:0] key,
-output logic [7:0] led,
+We are going to only look at the HW-154 I/O Board - Switches & LEDs section
+```Verilog
+    // HW-154 I/O Board - Switches & LEDs  
+    input  logic [7:0] key,
+    output logic [7:0] led,
 ```
 **inout** defines the direction of the signal pin, **logic** defines the type of "wire", \[7:0\] defines how many signals are generated in this "bus", and **key** is the name of the signals.
 
@@ -337,11 +348,7 @@ While we actually pass signals between the Gowin FPGA board and the HW-154 GPIO 
 └────────────────────┘                └─────────────────┘
 </pre>
 
-[!NOTE] We should have code in this first lab that startes with 
-> assign led [0] = key [0];
-> assign led [1] = key [1];
-> And then have the first lab to connect Led [6] and led[7] to key[6] and key[7]
-> before we have them do the logic gates.
+#### 🛠️ LAB Activity #1: Run Un-Edited Code
 
 **Gate, Wire, and Continus Assignments**  
 Let's see how to connect and generate an **AND** gate. in the assign statment below, we are connecting the inputs key[0] and key[1] to the led[0].  the **&** that you see in the right hand side of the assignment **=** sign is telling this assign statment to preform a Bitwise AND operation between key[0] and key[1].
@@ -356,16 +363,29 @@ This will look like the following schematic diagram:
                AND ---> led[0] 
    key[1] ----/ </pre>
    
-```
-    //------------------------------------------------------------------------
-
+```Verilog
     // Gates, wires and continuous assignments
 
     assign led [0] = key [0] & key [1];
-
-    // Exercise 1: Change the code above.
-    // Assign to led [0] the result of OR operation (|).
 ```
+**Running the FPGA Bash scripts**
+* If you have not done so already, Open a consol window
+* cd to the ~/gowin/basics-graphics-music/hackathon/problems/1_gates_and_muxes directory
+```Bash
+cd gowin/basics-graphics-music/hackathon/problems/1_gates_and_muxes
+```
+* with out saving any edits to hackathon_top.sv run the **03_synthesize_for_fpga.bash** script
+```Bash
+./03_synthesize_for_fpga.bash
+```
+
+**What Success Looks Like** - Only when both buttons **key[0]** and **key[1]** are pressed (value 1), **led[0]** will be turned ON (1)
+
+
+
+
+
+
 ##### Exercise 1: Change AND to OR
 change the code **assign led [0] = key [0] & key [1];** to preform an **OR** assignment 
 
@@ -651,23 +671,7 @@ Add a overview of how Logic Gate code works, and a few paragraphs of what are th
 ```Verilog
 Some code in Verilog
 ```
-##### Target Hardware Setup and Pin Description
-> [!NOTE] - This section should link to a presentation.
-> [!NOTE] - This section should have a picture showing the Gowin FPGA and GPIO module and the connections
-**GPIO Module - Hardware:** discription of hardware module and pins description as it's used i this lab.
-![Basic Board Setup For Gates & Mux Labs](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/verilog-gowin-gpio-01.png)
 
-**GPIO Module - Pin Description:**  
-| HW-154 Board Pin  |     FPGA Pin      |          Description                                    |  
-| ----------------- | ----------------- | ------------------------------------------------------- |  
-| J1-DIO            | GPIO-25           | DIO data channel for HW-154 LED&Key Board               |  
-| J1-CLK            | GPIO-26           | CLK (Clock) for synchronizing the data transfer         |  
-| J1- STB           | GPIO-27           | STB (Strobe) chip select or enable for communication    |  
-| J1- GND           | GND               | GND                                                     |  
-| J1- VCC           | VCC 3.3 V         | VCC 3.3 V                                               |   
-
-##### Target Software, Tools, Libraries & Drivers Setup
-> [!NOTE] - This section will cover any specific software, tools, Libraries or Drivers that are used
 
 ##### Verilog Logic Gate Labs / Challenges
 > [!NOTE] - This section will explain the specific Verilog Lab, what the goals are and outline the challenges.
@@ -707,3 +711,14 @@ Table
 | ----------- | ----------- |
 | Header | Title |
 | Paragraph | Text |
+
+  
+### Delete Later - Methods to show progress:
+If you want to show you are still working or done, add the following:  
+> [!NOTE] 🚧- Construction emoji, means you are still working on this section  
+> [!NOTE] ✅- Done with this task
+> [!NOTE] ❌- red "x", means you are not done, have not started, or are in progress
+> [!NOTE] 📝- This is a note to others. You can assign these notes to all or to a specific person.  
+> [!NOTE] ❎- If you see a note 📝 assigned to you or if you are going to accept it, replace it with a ❎  
+> [!NOTE] ❓- your name - Use this to ask a question to other writers/editors  
+> [!NOTE] 🅰️- your name - Use this to aswer the question
