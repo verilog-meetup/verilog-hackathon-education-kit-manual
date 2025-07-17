@@ -482,14 +482,14 @@ when you look at this truth table, notice that when the sel is low, it will alow
 | 1     | 0     | X     | 0     |
 | 1     | 1     | X     | 1     |
 
-<pre>               ┌────────────┐
-    in0 ────▶ │            │
-               │            │
-               │   2-to-1   │─────▶ out
-    in1 ────▶ │    MUX     │
-               │            │
-    sel ────▶ │  select=sel│
-               └────────────┘
+<pre>         ┌────────────┐
+    in0 ----> │            │
+              │            │
+              │   2-to-1   │ ----> out
+    in1 ----> │    MUX     │
+              │            │
+    sel ----> │ select=sel │
+              └────────────┘
 </pre>
 
 In the following labs you will explore the Verilog syntax and coding structures to build Logic Multiplexer (Mux's)
