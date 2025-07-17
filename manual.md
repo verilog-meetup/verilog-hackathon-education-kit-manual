@@ -1,11 +1,10 @@
 # Verilog Hackathon Education Kit Manual  
 ---
 ### Delete Later - New Messages & Notes:
-
+> [!NOTE] 2025-07-04 - (STEAM Clown) - I will be working on the Gates/Mux section labs today. connect on telegram or interact through this do when you push.  
 ### Delete Later - Notes to Writers:
 > [!NOTE] - Just so you know, I'm (STEAM Clown) an going to be just editing this doc in place, so if you make a fork, just make sure you check it in correctly
-> [!NOTE] 2025-07-04 - (STEAM Clown) - I will working on the Gates/Mux section labs today. connect on telegram or interact through this do when you push.  
-> [!NOTE]❓- (STEAM Clown) - Suggest a better title for this document.  Make some suggestions here to have this doc communicate better what we are trying to do.  "teaching verilg, showing steps to implement in hardware, help students gain a marketible skill."  
+> [!NOTE]❓- (STEAM Clown) - Suggest a better title for this document.  Make some suggestions here to have this doc communicate better what we are trying to do.  "teaching Verilog, showing steps to implement in hardware, help students gain a marketable skill."  
 > [ToDo] 🚧- (AnyOne) Update any section paragraphs to have breaks to make them more readable. make these breaks 78 characters to accommodate 78+CR+LF  
 
 ---
@@ -88,14 +87,14 @@ table into any logic function.
 
 So on FPGA you are limited with existing number of LUTs, memories, and other
 utility blocks like multipliers, while for ASIC you can use any number of
-library elements as long as you have area on the die to fit them.
+library elements as long as you have an area on the die to fit them.
 
 FPGA is a great platform for prototyping, because you can easily
 reconfigure the chip after making changes in Verilog source code. Meanwhile
 ASIC is a huge commitment, because after sending the final design to the
 factory you have to wait for several months before the first batch of chips
-would be made. And if there would be a fault in the design, a fix would cost a
-lot of additional time and money.
+would be made. And if there would be a fault in the design, a fix would cost 
+a lot of additional time and money.
 
 The same Verilog design would be able to reach much higher clock frequency in
 ASIC than on FPGA, due to length of FPGA interconnect fabric, LUT delay and
@@ -141,7 +140,7 @@ In this 🛠️ Lab Activity, you are going to install the Gowan Tang-Nano FPGA 
 > [!NOTE] - What other labs should we have to teach basic Verilog?  
 > [!NOTE] - STEAM CLown - I think that we should have a few more Labs to show using the GPIO board.  Also, maybe we should change the order of the labs, so we can do all the labs focused on the GPIO module before we start looking at the Display. Thoughts?
 
-> [!NOTE] We should have code in this first lab that startes with 
+> [!NOTE] We should have code in this first lab that starts with 
 > assign led [0] = key [0];
 > assign led [1] = key [1];
 > And then have the first lab to connect Led [6] and led[7] to key[6] and key[7]
@@ -149,7 +148,7 @@ In this 🛠️ Lab Activity, you are going to install the Gowan Tang-Nano FPGA 
 ---
 ## Verilog Labs
 ---
-The following are the Labs that are found in the [Basic Music - Hackation](https://github.com/verilog-meetup/basics-graphics-music) in the [Problems](https://github.com/verilog-meetup/basics-graphics-music/tree/main/hackathon/problems) directory.  Make sure you followed the instructions to git clone and copy these design files.
+The following are the Labs that are found in the [Basic Music - Hackation](https://github.com/verilog-meetup/basics-graphics-music) in the [Problems](https://github.com/verilog-meetup/basics-graphics-music/tree/main/hackathon/problems) directory.  Make sure you follow the instructions to git clone and copy these design files.
 
 ### Gates & Muxes
 #### Gates & Muxes Introduction
@@ -165,10 +164,10 @@ A **Multiplexer** (MUX) is a digital switch that selects one of several input si
 * Observe how changing the select signal affects the output LED
 * Learn how to extend MUX structures to support more inputs or wider data
 
-In the following labs you will explore the Verilog syntax and coding structurs to build Logic Gates and Mux's
+In the following labs you will explore the Verilog syntax and coding structures to build Logic Gates and Mux's
 
 #### Target Hardware Setup and Pin Description  
-**HW-154 Board I/O Board - Hardware Connections:** This is the basic pin discriptions & wiring connections from the Gowin FPGA board to the HW-154 Board I/O Board as used in this set of lab challenges.
+**HW-154 Board I/O Board - Hardware Connections:** This is the basic pin description & wiring connections from the Gowin FPGA board to the HW-154 Board I/O Board as used in this set of lab challenges.
 ![Basic Board Setup For Gates & Mux Labs](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/verilog-gowin-gpio-01.png)
 
 **GPIO Module - Pin Description:**  
@@ -181,15 +180,15 @@ In the following labs you will explore the Verilog syntax and coding structurs t
 | J1- VCC           | VCC 3.3 V         | VCC 3.3 V                                               |   
 
 #### Target Software, Tools, Libraries & Drivers Setup
-Make you have followed the instructions to install the Gowin tools and applications. See ![Gowin Install Instructions]()
+Make sure you have followed the instructions to install the Gowin tools and applications. See ![Gowin Install Instructions]()
 > [!NOTE] - Add link to Gowin Install Instructions
 
 #### Logic Gates Verilog Code
 Logic gates form the foundation of all digital electronics. These basic building blocks process two or more binary input values/signals (0 and 1) and produce a single binary output based on logical rules. Gates like AND, OR, and XOR enable a wide range of operations.   
 
-They can be simple LED control to complex logic. In Verilog, logic gates are implemented using continuous assignments (assign) and basic bitwise operators such as &, |, and ^. The following labs will introduces you to the Verilog syntax used to model and test these gates using Verilog on an FPGA platform, preparing you to build decision making circuits.  
+They can be simple LED control to complex logic. In Verilog, logic gates are implemented using continuous assignments (assign) and basic bitwise operators such as &, |, and ^. The following labs will introduce you to the Verilog syntax used to model and test these gates using Verilog on an FPGA platform, preparing you to build decision making circuits.  
 
-This set of labs will introduce and let you build Verilog code to implement six fundamental logic gates. You will have an opertunity to build AND, OR, XOR, NAND,  NOR, and XNOR Verilog implementations, connecting Push Button switches to LED's.   
+This set of labs will introduce and let you build Verilog code to implement six fundamental logic gates. You will have an opportunity to build AND, OR, XOR, NAND,  NOR, and XNOR Verilog implementations, connecting Push Button switches to LED's.   
 
 Each gate processes two binary inputs (0 = LOW, 1 = HIGH) and produces a binary output based on a specific logical rule. Let's take a look at the Logic Gate logical rules:
 ##### AND 
@@ -217,7 +216,7 @@ assign led[0] = key[0] & key[1];
 | 1       | 1       | 1            |  
 
 ##### OR 
-An **OR** gate outputs 1 if at least one input is 1. It’s used when any of several inputs can activate a result.  An example would let an ouput LED turn on if either button A or button B were presed.  Only one of the inputs needs to be active to create a logical result of a 1 on the output.  
+An **OR** gate outputs 1 if at least one input is 1. It’s used when any of several inputs can activate a result.  An example would let an output LED turn on if either button A or button B were pressed.  Only one of the inputs needs to be active to create a logical result of a 1 on the output.  
 
 **Logical Rules**  
 | Gate     | Symbol | Description                                | Output Rule |  
@@ -241,28 +240,30 @@ assign led[1] = key[0] | key[1];
 | 1        | 0        | 1            |
 | 1        | 1        | 1            |  
 
-[!NOTE] I'll add the XOR, NOR,NAND, XNOR later
+> [!NOTE] I'll add the XOR, NOR,NAND, XNOR later
 
 #### Logic Gates Verilog Code Introduction
 
 If you followed the GITHub clone instructions, you should have the following directory path:  
 **~/gowin/basics-graphics-music/hackathon/problems/1_gates_and_muxes/** where you will find the file **hackathon_top.sv**  
+```
+cd gowin/basics-graphics-music/hackathon/problems/1_gates_and_muxes
+```
+Open the **hackathon_top.sv** in a code editor,  VS-Code is recommended, but any text editor will work.  
 
-Open the **hackathon_top.sv** in a code editor,  VS-Code is recomended, but any text editor will work.  
-
-Let's review the Verilog syntax in this top level Verilog File.
+Let's review the Verilog syntax in this top level Verilog File. At this point, don't edit this file.  You are just looking at it.
 
 ---
 **Comment Used To Control The FPGA Bash flow**
 
-These 2 comments in Verilog is used by the Bash scripts that generate the FPGA files.  Please don't edit these comments.  
+These 2 comments in Verilog are used by the Bash scripts that generate the FPGA files.  Please don't edit these comments.  
 ```
 // Board configuration: tang_nano_9k_lcd_480_272_tm1638_hackathon
 // This module uses few parameterization and relaxed typing rules
 ```
 
 **Top Verilog Block Inputs and Outputs**  
-This section of the Verilog file defines all the Inputs and Outputs of the top level block.  Think of these as physical pins comming into or out of your Top Level Verilog Block.  
+This section of the Verilog file defines all the Inputs and Outputs of the top level block.  Think of these as physical pins coming into or out of your Top Level Verilog Block.  
 
 ```Verilog
 module hackathon_top
@@ -301,7 +302,7 @@ We are going to only look at the HW-154 I/O Board - Switches & LEDs section
 
 **output** defines the direction of the signal pin, **logic** defines the type of "wire", \[7:0\] defines how many signals are generated in this "bus", and **led** is the name of the signals.
 
-When this code is synthisized, if will generate the following pins/wires you can connect to:  
+When this code is synthesized, it will generate the following pins/wires you can connect to:  
 key[0]  
 key[1]  
 key[2]  
@@ -320,9 +321,9 @@ led[5]
 led[6]   
 led[7]     
 
-For this Logic Gates Lab, you are only going ot be using the **input  logic [7:0] key,** and **output logic [7:0] led,**. The other inout/outpus, input logic clock, input logic slow_clock, input logic reset, the dynamic seven-segment display & the LCD screen interface wires will be used and explained in subsiquent labs.  
+For this Logic Gates Lab, you are only going ot be using the **input  logic [7:0] key,** and **output logic [7:0] led,**. The other inout/outpus, input logic clock, input logic slow_clock, input logic reset, the dynamic seven-segment display & the LCD screen interface wires will be used and explained in subsequent labs.  
 
-While we actually pass signals between the Gowin FPGA board and the HW-154 GPIO board using a serial bus, that actially uses the inout  **logic [3:0] gpio** bus, for these first Logic and Mux labs, you can imagine the following block diagram reprisentation.  
+While we actually pass signals between the Gowin FPGA board and the HW-154 GPIO board using a serial bus, that actually uses the inout  **logic [3:0] gpio** bus, for these first Logic and Mux labs, you can imagine the following block diagram representation.  
 
 <pre> 
 ┌────────────────────┐                ┌─────────────────┐
@@ -350,8 +351,8 @@ While we actually pass signals between the Gowin FPGA board and the HW-154 GPIO 
 
 #### 🛠️ LAB Activity #1: Run Un-Edited Code
 
-**Gate, Wire, and Continus Assignments**  
-Let's see how to connect and generate an **AND** gate. in the assign statment below, we are connecting the inputs key[0] and key[1] to the led[0].  the **&** that you see in the right hand side of the assignment **=** sign is telling this assign statment to preform a Bitwise AND operation between key[0] and key[1].
+**Gate, Wire, and Continuous Assignments**  
+Let's see how to connect and generate an **AND** gate. In the assign statement below, we are connecting the inputs key[0] and key[1] to the led[0].  the **&** that you see in the right hand side of the assignment **=** sign is telling this assign statement to perform a Bitwise AND operation between key[0] and key[1].
 
 Only when both buttons **key[0]** and **key[1]** are pressed (value 1), **led[0]** will be turned ON (1).
 
@@ -369,7 +370,7 @@ This will look like the following schematic diagram:
     assign led [0] = key [0] & key [1];
 ```
 **Running the FPGA Bash scripts**
-* If you have not done so already, Open a consol window
+* If you have not done so already, Open a console window
 * cd to the ~/gowin/basics-graphics-music/hackathon/problems/1_gates_and_muxes directory
 ```Bash
 cd gowin/basics-graphics-music/hackathon/problems/1_gates_and_muxes
@@ -396,9 +397,9 @@ change the code **assign led [0] = key [0] & key [1];** to preform an **OR** ass
 
 Edit your code, save it, and in your consol window, run the bash script **03_synthesize_for_fpga.bash**
 
-**Success?** When you press the key[0] the led[0] should now light up.  if you then only press key[1], the led[0] should also still light up.  If you press both key[0] and key[1], led[0] should also ligh up, because this is a bitwise **OR** will respond to either key[0], key[1] or both.
+**Success?** When you press the key[0] the led[0] should now light up.  if you then only press key[1], the led[0] should also still light up.  If you press both key[0] and key[1], led[0] should also light up, because this is a bitwise **OR** will respond to either key[0], key[1] or both.
 
-#### Wire assigments - Aliasing signals  
+#### Wire assignments - Aliasing signals  
 **What is a Verilog "wire"?**  
 
 In Verilog, a **wire** is one of the most fundamental data types used to model physical electrical connections. A wire represents a combinational signal. A wire is something that is driven by some other logic but does not store a value on its own.  
@@ -432,7 +433,7 @@ Take a look at these diagrams and make sure you understand that they are equvele
    key[1] ----> b ----/</pre>
 </pre>
 
-##### Exercise 2: Use a wire assigment
+##### Exercise 2: Use a wire assignment
 
 ```
     wire a = key [0];  // Note a new construct - wire
@@ -539,10 +540,10 @@ endmodule
 ##### Target Hardware Setup and Pin Description
 > [!NOTE] - This section should link to a presentation.
 > [!NOTE] - This section should have a picture showing the Gowin FPGA and GPIO module and the connections
-**GPIO Module - Hardware:** discription of hardware module and pins description as it's used i this lab.
+**HW-154 Board Module - Hardware:** description of hardware module and pins description as it's used in this lab.
 ![Basic Board Setup For Gates & Mux Labs](https://github.com/verilog-meetup/verilog-hackathon-education-kit-manual/blob/main/images/verilog-gowin-gpio-01.png)
 
-**GPIO Module - Pin Description:**
+**HW-154 Board Module - Pin Description:**
 | HW-154 Board Pin  |     FPGA Pin      |          Description                                    |  
 | ----------------- | ----------------- | ------------------------------------------------------- |  
 | J1-DIO            | GPIO-25           | DIO data channel for HW-154 LED&Key Board               |  
@@ -582,7 +583,7 @@ This section will cover how and where to run the Verilog compile scripts to targ
 Describe what a successful completion of the lab looks like
 
 ##### Next Steps - Dig Deeper
-Provide some additional resourses or assignments to look at
+Provide some additional resources or assignments to look at
 
 #### Multiplexer Verilog Code
 
@@ -613,7 +614,7 @@ Provide some additional resourses or assignments to look at
 ---
 # END Of Doc  
 ---
-Everythig below will get deleted, and was just part of the original md template  
+Everything below will get deleted, and was just part of the original md template  
 
 ### 1. Board Setup
 
@@ -664,10 +665,10 @@ Overview of component
 * This Step should take about N minutes to complete. 
 #### Learning Goals
 
-#### Lab Title - Verilog Code Eplanation
+#### Lab Title - Verilog Code Explanation
 > [!NOTE] - This section will show the Verilog code examples, explain how it works, and any new Verilog structures
 **Verilog Code Used In This Lab**
-Add a overview of how Logic Gate code works, and a few paragraphs of what are the logic gates, and what they look like in Verilog
+Add an overview of how Logic Gate code works, and a few paragraphs of what are the logic gates, and what they look like in Verilog
 ```Verilog
 Some code in Verilog
 ```
@@ -700,7 +701,7 @@ This section will cover how and where to run the Verilog compile scripts to targ
 Describe what a successful completion of the lab looks like
 
 ##### Next Steps - Dig Deeper
-Provide some additional resourses or assignments to look at
+Provide some additional resources or assignments to look at
 ---
 
 
@@ -721,4 +722,4 @@ If you want to show you are still working or done, add the following:
 > [!NOTE] 📝- This is a note to others. You can assign these notes to all or to a specific person.  
 > [!NOTE] ❎- If you see a note 📝 assigned to you or if you are going to accept it, replace it with a ❎  
 > [!NOTE] ❓- your name - Use this to ask a question to other writers/editors  
-> [!NOTE] 🅰️- your name - Use this to aswer the question
+> [!NOTE] 🅰️- your name - Use this to answer the question
