@@ -482,7 +482,8 @@ when you look at this truth table, notice that when the sel is low, it will alow
 | 1     | 0     | X     | 0     |
 | 1     | 1     | X     | 1     |
 
-<pre>         ┌────────────┐
+<pre>
+              ┌────────────┐
     in0 ----> │            │
               │            │
               │   2-to-1   │ ----> out
@@ -493,14 +494,20 @@ when you look at this truth table, notice that when the sel is low, it will alow
 </pre>
 
 In the following labs you will explore the Verilog syntax and coding structures to build Logic Multiplexer (Mux's)
+* Build a 2-to-1 MUX using a Logical if/else assignment: if (sel == 1)     // If sel == 1
 * Build a 2-to-1 MUX using assign out = sel ? in1 : in0;
 * Observe how changing the select signal affects the output LED
 * Learn how to extend MUX structures to support more inputs or wider data
 
-* 
+#### 🛠️ LAB Activity #1: Understand a 2x1 Mux
+In this 2X1 Mux lab, you are going to implement a 2X1 mux.  using an if/else Logical assignment.  
 
+This Verilog code is implementing some wire assignments for key[7] as a select signal, and key[6] and key[5] as Data signals.  This implimentation will select or "route" the state of the button key[6] out to the led[7] if the select key[7] is pressed. If key[7] is not pressed, then the value of key[5] will be assigned to the led[7].  
+
+**Example Verilog Code**
+Explain the challenge
+```Verilog
     //------------------------------------------------------------------------
-
     // Signals for demoing multiplexers
 
     assign sel = key [7];
@@ -508,9 +515,18 @@ In the following labs you will explore the Verilog syntax and coding structures 
     assign d0  = key [5];
 
     //------------------------------------------------------------------------
+```
+Take a look at the logical if/else statement.  this basically behaves in the same way a a programing if/esle in C++ or Python.  You are using the "sel" value to select between the input signals "d1" or "d0". 
 
-    // Five different implementations
+**always_comb** is a SystemVerilog keyword that creates a combinational logic block. The **always_comb** is the recomended way to make these types of logical choices. Review these benifits:  
+* It automatically infers all input signals (you don’t need to manually list them)
+* It guarantees combinational behavior
+* It avoids accidental latches, which can happen with incomplete if/case logic
 
+This code creates a 2-to-1 multiplexer using an always_comb block. The sel signal chooses between d0 and d1. If sel == 1, the value from d1 goes to led[7]; if sel == 0, d0 is sent instead. The always_comb block ensures that the logic is purely combinational, meaning the output changes immediately as the inputs change, with no memory or clock involved.
+
+
+```Verilog
     always_comb  // Combinational always block
     begin
         if (sel == 1)     // If sel == 1
@@ -518,9 +534,29 @@ In the following labs you will explore the Verilog syntax and coding structures 
         else
             led [7] = d0;  //    Output value of "b" to led [0]
     end
+```
+| Line            | Explanation                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------- |
+| `always_comb`   | Declare a combinational logic block that re-evaluates whenever any input used inside changes |
+| `if (sel == 1)` | If the select signal is `1`…                                                                 |
+| `led[7] = d1;`  | …then assign the value of input `d1` to output `led[7]`                                      |
+| `else`          | Otherwise, when `sel == 0`…                                                                  |
+| `led[7] = d0;`  | …assign the value of `d0` to output `led[7]`                                                 |
 
-    //------------------------------------------------------------------------
 
+**Challenge**
+With out editing the MUX code in hackathon_top.sv,  run the **03_synthesize_for_fpga.bash** script
+```Bash
+./03_synthesize_for_fpga.bash
+```
+
+**Running the FPGA Bash scripts**
+This section will cover how and where to run the Verilog compile scripts to target the FPGA. Eplain what they should do... Edit your code, save it, and in your console window, run the bash script **03_synthesize_for_fpga.bash**
+
+**What Success Looks Like** - With out pressing the key[7], press the key[6] or key[5], and see which Push Button turns on led[7].  Then press key[7], and see that the selected Push Button has changed. This implimentation will select or "route" the state of the button key[6] out to the led[7] if the select key[7] is pressed. If key[7] is not pressed, then the value of key[5] will be assigned to the led[7].  
+ 
+#### 🛠️ LAB Activity #2: Understand that the "sel" signal can be treated as a logical Boolian value.
+ 
     /*
 
     // "== 1" is not necessary
@@ -538,9 +574,13 @@ In the following labs you will explore the Verilog syntax and coding structures 
 
     //------------------------------------------------------------------------
 
+#### 🛠️ LAB Activity #3: Using the "assign" to select between 2 inputs    
+
     assign led [6] = sel ? d1 : d0;  // If sel == 1, choose d1, otherwise d0
 
     //------------------------------------------------------------------------
+
+#### 🛠️ LAB Activity #4: Using the always_comb and a "case" structure
 
     // You can also use "case" like "switch" in "C"
 
