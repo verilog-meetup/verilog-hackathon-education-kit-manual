@@ -28,6 +28,47 @@ While the Verilog design flows described in this Manual can target multiple FPGA
 
 ---
 
+# Why Verilog?
+
+Digital circuits primarily consist of interconnected transistors. We analyze these circuits with the aid of
+hierarchical structure. 
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+Hierarchical structure allow us to represent a digital circuit by means of interconnected diagrams called Schematic.
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+But as the complexity of the circuit increases every two years according to Moore's law schematic intuitiveness becomes
+a liability, so Hardware description Language like Verilog, SystemVerilog and VHDL came into picture.
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+---
+
+# RTL Design
+
+HDLs model the digital circuits in as RTL. Register Transfer refers to how the language describes the 
+data flow between register and how to apply logical operations on the data.
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+<pre><code data-trim class="language-verilog">
+module and_gate ( 
+    input wire a, 
+    input wire b, 
+    output wire y 
+); 
+    assign y = a & b; 
+end module
+</code></pre>
+
+---
+
+# Constructs
+
+Basic constructs of SystemVerilog includes :
+
+SystemVerilog is used for generating RTL circuits. RTL circuits are used for 
+generating both combination and sequential blo
+
+---
 
 
 
