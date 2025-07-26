@@ -73,7 +73,7 @@ cd ./имя_папки/
 говорят подняться на уровень выше. Примеры использования команд для
 перемещения между заданиями ниже.
 
-![](images_shreg/image33.png)
+<img src="images_shreg/image33.png" style="width: 30%; height: auto;" />
 
 ![](images_shreg/image34.png)
 

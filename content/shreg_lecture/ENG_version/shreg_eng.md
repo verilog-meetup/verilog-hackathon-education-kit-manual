@@ -130,7 +130,8 @@ containing this module (```slow_clk_gen```).
 
 This manual doesn’t provide learning these modules in detail, all changes should be in ```hackathon_top.sv```. 
 However, ```parameter``` and ```localparam``` used in these modules will be described separately in the exercises
-```folder_name/file_name```.
+
+[Article about parameter and localparam](param_and_localparam_eng.md)
 
 ### Example on board 2. A solution with ```enable``` from black box
 
