@@ -1,0 +1,80 @@
+module full_adder
+(
+    input  a,
+    input  b,
+    input  carry_in,
+    output sum,
+    output carry_out
+);
+
+    assign sum  = a ^ b ^ carry_in;
+    assign cout = (a & b) | (a & carry_in) | (b & carry_in);
+
+endmodule
+
+module full_adder_testbench;
+
+    logic a, b, carry_in, sum, carry_out;
+
+    // Instantiating Design under Test - DUT
+
+    full_adder dut_instance
+    (
+        .a (a), .b (b), .carry_in  (carry_in),
+        .sum (sum),     .carry_out (carry_out)
+    );
+
+    logic [1:0] expected_2_bit_value;
+    
+    initial
+    begin
+        // $dumpvars is a directive that tells
+        // Icarus Verilog to generate a Value Change Dump (VCD)
+
+        $dumpvars;
+        
+        // A trivial direct test
+        
+        a        = 1'b0;
+        b        = 1'b1;
+        carry_in = 1'b1;
+
+        # 10  // Wait for 10 abstract time units
+        
+        // Logging the result
+        
+        if (~ (sum === 1'b0 & carry_out == 1'b1)
+            $display ("Unexpected result");
+
+        // A random test with better logging and self-checking
+
+        repeat (100)
+        begin
+            a        = $urandom ();
+            b        = $urandom ();
+            carry_in = $urandom ();
+            
+            expected_2_bit_value = a + b + carry_in;
+            
+            # 10
+
+            // Logging
+            
+            $display ("a = %b, b = %b, carry_in = %b, sum = %b, carry_out = %b",
+                a, b, carry_in, sum, carry_out);
+
+            // Checking
+
+            if ({ carry_out, sum } !== expected_2_bit_value)
+            begin
+                $display ("ERROR: { carry_out, sum } is expected to be %b",
+                    expected_2_bit_value);
+                    
+                break;
+            end
+        end
+        
+        $finish;
+    end
+
+endmodule
