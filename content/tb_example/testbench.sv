@@ -1,54 +1,69 @@
-`include "util.svh"
+module full_adder_testbench;
 
-module testbench;
+    timeunit      1ns;
+    timeprecision 1ps;
 
-  logic [3:0] d0, d1, d2, d3;
-  logic [1:0] sel;
-  logic [3:0] y;
+    logic a, b, carry_in, sum, carry_out;
 
-  mux_4_1 inst
-  (
-    .d0  (d0), .d1 (d1), .d2 (d2), .d3 (d3),
-    .sel (sel),
-    .y   (y)
-  );
+    // Instantiating Design under Test - DUT
 
-  task test
+    full_adder dut_instance
     (
-      input [3:0] td0, td1, td2, td3,
-      input [1:0] tsel,
-      input [3:0] ty
+        .a (a), .b (b), .carry_in  (carry_in),
+        .sum (sum),     .carry_out (carry_out)
     );
 
-    { d0, d1, d2, d3, sel } = { td0, td1, td2, td3, tsel };
+    logic [1:0] expected_2_bit_value;
 
-    # 1;
-
-    if (y !== ty)
-      begin
-        $display("FAIL %s", `__FILE__);
-        $display("++ INPUT    => {%s, %s, %s, %s, %s}", `PH(d0), `PH(d1), `PH(d2), `PH(d3), `PH(sel));
-        $display("++ EXPECTED => {%s}", `PH(ty));
-        $display("++ ACTUAL   => {%s}", `PH(y));
-        $finish(1);
-      end
-
-  endtask
-
-  initial
+    initial
     begin
-      test ('ha, 'hb, 'hc, 'hd, 0, 'ha);
-      test ('ha, 'hb, 'hc, 'hd, 1, 'hb);
-      test ('ha, 'hb, 'hc, 'hd, 2, 'hc);
-      test ('ha, 'hb, 'hc, 'hd, 3, 'hd);
+        // $dumpvars is a directive that tells
+        // Icarus Verilog to generate a Value Change Dump (VCD)
 
-      test (7, 10, 3, 'x, 0, 7);
-      test (7, 10, 3, 'x, 1, 10);
-      test (7, 10, 3, 'x, 2, 3);
-      test (7, 10, 3, 'x, 3, 'x);
+        $dumpvars;
 
-      $display ("PASS %s", `__FILE__);
-      $finish;
+        // A trivial direct test
+
+        a        = 1'b0;
+        b        = 1'b1;
+        carry_in = 1'b1;
+
+        # 10  // Wait for 10 abstract time units
+
+        // Logging the result
+
+        if (~ (sum === 1'b0 & carry_out == 1'b1))
+            $display ("Unexpected result");
+
+        // A random test with better logging and self-checking
+
+        repeat (100)
+        begin
+            a        = $urandom ();
+            b        = $urandom ();
+            carry_in = $urandom ();
+
+            expected_2_bit_value = a + b + carry_in;
+
+            # 10
+
+            // Logging
+
+            $display ("%d a=%b b=%b carry_in=%b sum=%b carry_out=%b",
+                $time, a, b, carry_in, sum, carry_out);
+
+            // Checking
+
+            if ({ carry_out, sum } !== expected_2_bit_value)
+            begin
+                $display ("ERROR: { carry_out, sum } is expected to be %b",
+                    expected_2_bit_value);
+
+                $finish;
+            end
+        end
+
+        $finish;
     end
 
 endmodule
