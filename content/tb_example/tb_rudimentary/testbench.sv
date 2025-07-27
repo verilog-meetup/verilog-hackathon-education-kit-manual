@@ -13,7 +13,7 @@ module full_adder_testbench;
 
     initial
     begin
-        $dumpvars;
+        $dumpvars (0, dut_instance);
 
         a        = 1'b0;
         b        = 1'b1;
