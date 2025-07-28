@@ -1,15 +1,8 @@
 module full_adder_testbench;
 
-    timeunit      1ns;
-    timeprecision 1ps;
-
     logic a, b, carry_in, sum, carry_out;
 
-    full_adder dut_instance
-    (
-        .a (a), .b (b), .carry_in  (carry_in),
-        .sum (sum),     .carry_out (carry_out)
-    );
+    full_adder dut_instance (.*)
 
     logic [1:0] expected_2_bit_value;
 
@@ -25,7 +18,7 @@ module full_adder_testbench;
 
             expected_2_bit_value = a + b + carry_in;
 
-            # 10
+            # 1
 
             $display ("%d a=%b b=%b carry_in=%b sum=%b carry_out=%b",
                 $time, a, b, carry_in, sum, carry_out);
